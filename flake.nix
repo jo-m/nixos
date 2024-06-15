@@ -5,7 +5,11 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = {
+    self,
+    nixpkgs,
+    ...
+  } @ inputs: {
     # nixos is the hostname
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -15,5 +19,7 @@
         ./configuration.nix
       ];
     };
+
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
   };
 }
