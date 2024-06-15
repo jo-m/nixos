@@ -10,6 +10,9 @@
       ./hardware-configuration.nix
     ];
 
+  # Flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
