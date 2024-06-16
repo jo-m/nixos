@@ -51,6 +51,18 @@
     xkb.variant = "";
   };
 
+  security.sudo.extraRules = [
+    {
+      users = ["joni"];
+      commands = [
+        {
+          command = "ALL";
+          options = ["NOPASSWD"];
+        }
+      ];
+    }
+  ];
+
   # Exclude some Gnome packages
   # https://nixos.wiki/wiki/GNOME#Excluding_some_GNOME_applications_from_the_default_install
   environment.gnome.excludePackages =
