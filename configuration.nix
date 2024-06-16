@@ -129,6 +129,10 @@
 
     # Gnome app tray
     gnomeExtensions.appindicator
+    # Drop down terminal
+    gnomeExtensions.ddterm
+    # Dock
+    gnomeExtensions.dash-to-dock
   ];
 
   # For Gnome app indicators
