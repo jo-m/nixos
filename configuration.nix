@@ -171,6 +171,9 @@
     whois
     zstd
 
+    # Fish
+    fishPlugins.z
+
     # Desktop apps
     baobab
     ddcutil
