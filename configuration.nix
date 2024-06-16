@@ -134,17 +134,67 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    git
-    wget
+    bat
+    bc
+    btop
+    chezmoi
+    clang-tools
     curl
+    ddcui
+    ethtool
+    fzf
+    gcc9
+    git
+    gnumake
     htop
+    iftop
+    imagemagick
+    iperf
+    jq
+    minicom
+    moreutils
+    mycli
+    nettools
+    nmap
+    openvpn
+    pbzip2
+    pdftk
+    pgcli
+    poppler_utils
+    potrace
+    powertop
+    pv
+    ripgrep
+    screen
+    sqlite
+    sysstat
+    tmux
+    unrar
+    wget
+    whois
+    zstd
 
-    # Gnome app tray
-    gnomeExtensions.appindicator
-    # Drop down terminal
-    gnomeExtensions.ddterm
-    # Dock
-    gnomeExtensions.dash-to-dock
+    # GUI apps
+    baobab
+    ddcutil
+    ffmpeg_7-full
+    flameshot
+    gimp-with-plugins
+    gnome.sushi
+    inkscape
+    iosevka
+    libreoffice
+    mediainfo-gui
+    powerline-fonts
+    telegram-desktop
+    vlc
+    vscodium
+
+    # Gnome extensions
+    gnomeExtensions.appindicator # App tray
+    gnomeExtensions.ddterm # Drop down terminal
+    gnomeExtensions.dash-to-dock # Dock
+    gnomeExtensions.move-clock
   ];
 
   # For Gnome app indicators
