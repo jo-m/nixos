@@ -51,6 +51,24 @@
     xkbVariant = "";
   };
 
+  # Exclude some Gnome packages
+  # https://nixos.wiki/wiki/GNOME#Excluding_some_GNOME_applications_from_the_default_install
+  environment.gnome.excludePackages =
+    (with pkgs; [
+      gnome-photos
+      gnome-tour
+    ])
+    ++ (with pkgs.gnome; [
+      gnome-music
+      epiphany # web browser
+      geary # email reader
+      totem # video player
+      tali # poker game
+      iagno # go game
+      hitori # sudoku game
+      atomix # puzzle game
+    ]);
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -89,6 +107,18 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Fish
+  programs.fish.enable = true;
+  programs.bash = {
+    interactiveShellInit = ''
+      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
+      then
+        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+      fi
+    '';
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -96,7 +126,13 @@
     wget
     curl
     htop
+
+    # Gnome app tray
+    gnomeExtensions.appindicator
   ];
+
+  # For Gnome app indicators
+  services.udev.packages = with pkgs; [gnome.gnome-settings-daemon];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
