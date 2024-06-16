@@ -179,10 +179,17 @@
     gimp-with-plugins
     gnome.sushi
     inkscape
+    insync
+    insync-nautilus
     iosevka
+    joplin-desktop
+    keepassxc
     libreoffice
     mediainfo-gui
     powerline-fonts
+    sublime-merge-dev
+    syncthing
+    syncthingtray
     telegram-desktop
     vlc
     vscodium
