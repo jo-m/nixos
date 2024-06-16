@@ -138,14 +138,11 @@
     bc
     btop
     chezmoi
-    clang-tools
     curl
     ddcui
     ethtool
     fzf
-    gcc9
     git
-    gnumake
     htop
     iftop
     imagemagick
@@ -174,7 +171,7 @@
     whois
     zstd
 
-    # GUI apps
+    # Desktop apps
     baobab
     ddcutil
     ffmpeg_7-full
@@ -189,6 +186,14 @@
     telegram-desktop
     vlc
     vscodium
+
+    # Dev
+    clang-tools
+    gcc9
+    gnumake
+    go
+    rustc
+    cargo
 
     # Gnome extensions
     gnomeExtensions.appindicator # App tray
