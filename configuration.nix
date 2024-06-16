@@ -181,6 +181,7 @@
     flameshot
     gimp-with-plugins
     gnome.sushi
+    google-chrome
     inkscape
     insync
     insync-nautilus
