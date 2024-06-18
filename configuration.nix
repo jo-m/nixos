@@ -238,6 +238,7 @@ in {
     gnomeExtensions.solaar-extension
     papirus-icon-theme
     gnomeExtensions.user-themes
+    gnomeExtensions.logo-menu
   ];
 
   # For Gnome app indicators
