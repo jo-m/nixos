@@ -74,6 +74,13 @@ in {
     }
   ];
 
+  services.syncthing = {
+    enable = true;
+    user = username;
+    dataDir = "/home/${username}/Sync"; # Default folder for new synced folders
+    configDir = "/home/${username}/.config/syncthing"; # Folder for Syncthing's settings and keys
+  };
+
   # Exclude some Gnome packages
   # https://nixos.wiki/wiki/GNOME#Excluding_some_GNOME_applications_from_the_default_install
   environment.gnome.excludePackages =
@@ -205,8 +212,6 @@ in {
     powerline-fonts
     solaar
     sublime-merge-dev
-    syncthing
-    syncthingtray
     telegram-desktop
     vlc
     vscodium
