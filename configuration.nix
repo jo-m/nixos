@@ -155,6 +155,7 @@ in {
     bat
     bc
     btop
+    borgbackup
     chezmoi
     curl
     ddcui
@@ -179,6 +180,7 @@ in {
     potrace
     powertop
     pv
+    python3
     ripgrep
     screen
     sqlite
