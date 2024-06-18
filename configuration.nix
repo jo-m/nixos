@@ -201,6 +201,7 @@
     libreoffice
     mediainfo-gui
     powerline-fonts
+    solaar
     sublime-merge-dev
     syncthing
     syncthingtray
@@ -222,10 +223,14 @@
     gnomeExtensions.dash-to-dock # Dock
     gnomeExtensions.move-clock
     gnomeExtensions.brightness-panel-menu-indicator
+    gnomeExtensions.solaar-extension
   ];
 
   # For Gnome app indicators
   services.udev.packages = with pkgs; [gnome.gnome-settings-daemon];
+
+  # For Solaar
+  hardware.logitech.wireless.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
