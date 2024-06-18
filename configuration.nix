@@ -189,6 +189,7 @@
     ffmpeg_7-full
     flameshot
     gimp-with-plugins
+    gnome.gnome-tweaks
     gnome.sushi
     google-chrome
     inkscape
