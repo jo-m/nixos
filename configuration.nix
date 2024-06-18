@@ -16,6 +16,10 @@
 
   # Kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelParams = [
+    "mitigations=off"
+    # Maybe later: "zswap.enabled=1"
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
