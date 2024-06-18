@@ -118,10 +118,7 @@
     description = "joni";
     extraGroups = ["networkmanager" "wheel" "i2c"];
     packages = with pkgs; [
-      # We install Syncthing-GTK from here.
-      # flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-      flatpak
-      gnome.gnome-software # For Flatpak.
+      #  thunderbird
     ];
   };
 
