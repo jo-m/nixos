@@ -5,7 +5,9 @@
   config,
   pkgs,
   ...
-}: {
+}: let
+  username = "joni";
+in {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -62,7 +64,7 @@
 
   security.sudo.extraRules = [
     {
-      users = ["joni"];
+      users = [username];
       commands = [
         {
           command = "ALL";
@@ -113,9 +115,9 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.joni = {
+  users.users."${username}" = {
     isNormalUser = true;
-    description = "joni";
+    description = username;
     extraGroups = ["networkmanager" "wheel" "i2c"];
     packages = with pkgs; [
       #  thunderbird
