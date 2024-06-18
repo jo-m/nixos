@@ -155,7 +155,6 @@ in {
     bat
     bc
     btop
-    borgbackup
     chezmoi
     curl
     ddcui
@@ -190,6 +189,10 @@ in {
     wget
     whois
     zstd
+
+    # Backup
+    libsecret
+    borgbackup
 
     # Fish
     fishPlugins.z
