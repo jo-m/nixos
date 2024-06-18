@@ -236,6 +236,8 @@ in {
     gnomeExtensions.move-clock
     gnomeExtensions.brightness-panel-menu-indicator
     gnomeExtensions.solaar-extension
+    papirus-icon-theme
+    gnomeExtensions.user-themes
   ];
 
   # For Gnome app indicators
