@@ -29,6 +29,11 @@
   networking.hostName = "nixbox"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+  # DDC
+  hardware.i2c.enable = true;
+  boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
+  boot.kernelModules = ["i2c-dev" "ddcci_backlight"];
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -111,7 +116,7 @@
   users.users.joni = {
     isNormalUser = true;
     description = "joni";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "i2c"];
     packages = with pkgs; [
       #  thunderbird
     ];
@@ -215,6 +220,7 @@
     gnomeExtensions.ddterm # Drop down terminal
     gnomeExtensions.dash-to-dock # Dock
     gnomeExtensions.move-clock
+    gnomeExtensions.brightness-panel-menu-indicator
   ];
 
   # For Gnome app indicators
