@@ -262,6 +262,10 @@ in {
     setSocketVariable = true;
   };
 
+  # Disable command-not-found, which is broken atm when using NixOS with Flakes
+  # https://discourse.nixos.org/t/command-not-found-not-working/24023/5
+  programs.command-not-found.enable = false;
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
