@@ -235,8 +235,6 @@ in {
     gnomeExtensions.ddterm # Drop down terminal
     gnomeExtensions.dash-to-dock # Dock
     gnomeExtensions.move-clock
-    gnomeExtensions.brightness-panel-menu-indicator
-    gnomeExtensions.solaar-extension
     papirus-icon-theme
     gnomeExtensions.user-themes
     gnomeExtensions.logo-menu
