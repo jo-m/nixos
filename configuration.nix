@@ -158,6 +158,7 @@ in {
     chezmoi
     curl
     ddcui
+    direnv
     ethtool
     fzf
     git
