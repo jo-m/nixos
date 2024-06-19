@@ -240,6 +240,7 @@ in {
     papirus-icon-theme
     gnomeExtensions.user-themes
     gnomeExtensions.logo-menu
+    gnomeExtensions.control-monitor-brightness-and-volume-with-ddcutil
   ];
 
   # For Gnome app indicators
@@ -253,6 +254,12 @@ in {
     l = null;
     ls = null;
     ll = null;
+  };
+
+  # Rootless Docker
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
