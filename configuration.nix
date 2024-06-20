@@ -274,6 +274,7 @@ in {
     gnumake
     go
     gperf
+    hugo
     ncurses5
     ninja
     nodejs_20
