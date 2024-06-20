@@ -161,6 +161,7 @@ in {
     curl
     direnv
     ethtool
+    file
     git
     htop
     iftop
