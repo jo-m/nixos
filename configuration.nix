@@ -261,6 +261,7 @@ in {
     ninja
     nodejs_20
     pkg-config
+    pkgsCross.aarch64-multiplatform.gcc13
     python3.pkgs.pip
     python3.pkgs.virtualenv
     rustc
