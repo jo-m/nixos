@@ -125,7 +125,7 @@ in {
   users.users."${username}" = {
     isNormalUser = true;
     description = username;
-    extraGroups = ["networkmanager" "wheel" "i2c"];
+    extraGroups = ["networkmanager" "wheel" "i2c" "scanner" "lp"];
     packages = with pkgs; [
       #  thunderbird
     ];
@@ -152,44 +152,57 @@ in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    bat
+    # Basics
     bc
-    btop
+    bcc
+    bpftrace
     chezmoi
+    cpuid
     curl
-    ddcui
     direnv
     ethtool
-    fzf
     git
     htop
     iftop
     imagemagick
     iperf
+    iproute2
+    iw
     jq
+    lshw
     minicom
     moreutils
     mycli
     nettools
     nmap
+    numactl
     openvpn
     pbzip2
     pdftk
     pgcli
     poppler_utils
-    potrace
     powertop
+    procps
     pv
     python3
     ripgrep
     screen
     sqlite
     sysstat
+    tcpdump
     tmux
+    trace-cmd
+    tshark
     unrar
+    util-linux
     wget
     whois
     zstd
+
+    # Fancy new CLI tools
+    bat
+    fzf
+    btop
 
     # Backup
     libsecret
@@ -198,15 +211,19 @@ in {
     # Fish
     fishPlugins.z
 
-    # Desktop apps
+    # Desktop/GUI apps
     baobab
+    ddcui
     ddcutil
     ffmpeg_7-full
     flameshot
     gimp-with-plugins
+    gnome.dconf-editor
     gnome.gnome-tweaks
+    gnome.simple-scan
     gnome.sushi
     google-chrome
+    gparted
     inkscape
     insync
     insync-nautilus
@@ -215,12 +232,16 @@ in {
     keepassxc
     libreoffice
     mediainfo-gui
+    potrace
     powerline-fonts
+    sane-backends
     solaar
     sublime-merge-dev
     telegram-desktop
+    usbutils
     vlc
     vscodium
+    wireshark
 
     # Dev
     clang-tools
