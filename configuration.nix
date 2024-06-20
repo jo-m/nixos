@@ -30,6 +30,19 @@ in {
   boot.initrd.luks.devices."luks-aad5ea7d-9f2e-470f-8642-d269998e034c".device = "/dev/disk/by-uuid/aad5ea7d-9f2e-470f-8642-d269998e034c";
   networking.hostName = "nixbox"; # Define your hostname.
 
+  # Intel video accel drivers
+  nixpkgs.config.packageOverrides = pkgs: {
+    intel-vaapi-driver = pkgs.intel-vaapi-driver.override {enableHybridCodec = true;};
+  };
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver # LIBVA_DRIVER_NAME=iHD
+      libvdpau-va-gl
+    ];
+  };
+  environment.sessionVariables = {LIBVA_DRIVER_NAME = "iHD";}; # Force intel-media-driver
+
   # DDC
   hardware.i2c.enable = true;
   boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
@@ -214,12 +227,14 @@ in {
     ffmpeg_7-full
     flameshot
     gimp-with-plugins
+    glxinfo
     gnome.dconf-editor
     gnome.gnome-tweaks
     gnome.simple-scan
     gnome.sushi
     google-chrome
     gparted
+    gpu-viewer
     inkscape
     insync
     insync-nautilus
@@ -228,9 +243,11 @@ in {
     joplin-desktop
     keepassxc
     libreoffice
+    libva-utils # For vainfo (video accel)
     losslesscut-bin
     mediainfo-gui
     meld
+    mesa-demos
     potrace
     powerline-fonts
     qgis
@@ -242,6 +259,7 @@ in {
     usbutils
     vlc
     vscodium
+    vulkan-tools
     wireshark
     xournalpp
 
