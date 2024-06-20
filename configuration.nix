@@ -125,6 +125,12 @@ in {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Evolution with exchange connector
+  programs.evolution = {
+    enable = true;
+    plugins = [pkgs.evolution-ews];
+  };
+
   # Fish
   programs.fish.enable = true;
   programs.bash = {
@@ -217,15 +223,19 @@ in {
     inkscape
     insync
     insync-nautilus
+    intel-gpu-tools
     iosevka
     joplin-desktop
     keepassxc
     libreoffice
+    losslesscut-bin
     mediainfo-gui
     meld
     potrace
     powerline-fonts
+    qgis
     sane-backends
+    signal-desktop
     solaar
     sublime-merge-dev
     telegram-desktop
@@ -233,6 +243,7 @@ in {
     vlc
     vscodium
     wireshark
+    xournalpp
 
     # Dev
     ansible
