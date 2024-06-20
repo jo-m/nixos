@@ -29,16 +29,11 @@ in {
 
   boot.initrd.luks.devices."luks-aad5ea7d-9f2e-470f-8642-d269998e034c".device = "/dev/disk/by-uuid/aad5ea7d-9f2e-470f-8642-d269998e034c";
   networking.hostName = "nixbox"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # DDC
   hardware.i2c.enable = true;
   boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
   boot.kernelModules = ["i2c-dev" "ddcci_backlight"];
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -89,14 +84,14 @@ in {
       gnome-tour
     ])
     ++ (with pkgs.gnome; [
-      gnome-music
+      atomix # puzzle game
       epiphany # web browser
       geary # email reader
-      totem # video player
-      tali # poker game
-      iagno # go game
+      gnome-music
       hitori # sudoku game
-      atomix # puzzle game
+      iagno # go game
+      tali # poker game
+      totem # video player
     ]);
 
   # Enable CUPS to print documents.
@@ -112,14 +107,7 @@ in {
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."${username}" = {
@@ -269,13 +257,13 @@ in {
 
     # Gnome extensions
     gnomeExtensions.appindicator # App tray
-    gnomeExtensions.ddterm # Drop down terminal
-    gnomeExtensions.dash-to-dock # Dock
-    gnomeExtensions.move-clock
-    papirus-icon-theme
-    gnomeExtensions.user-themes
-    gnomeExtensions.logo-menu
     gnomeExtensions.control-monitor-brightness-and-volume-with-ddcutil
+    gnomeExtensions.dash-to-dock # Dock
+    gnomeExtensions.ddterm # Drop down terminal
+    gnomeExtensions.logo-menu
+    gnomeExtensions.move-clock
+    gnomeExtensions.user-themes
+    papirus-icon-theme
   ];
 
   # For Gnome app indicators
