@@ -285,7 +285,7 @@ in {
 
   # Disable the default NixOS shell aliases
   environment.shellAliases = {
-    l = null;
+    l = "ls -luh";
     ls = null;
     ll = null;
   };
