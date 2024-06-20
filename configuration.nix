@@ -247,12 +247,22 @@ in {
     wireshark
 
     # Dev
+    ansible
+    bison
+    cargo
     clang-tools
+    cmake
+    flex
     gcc9
     gnumake
     go
+    gperf
+    ncurses5
+    ninja
+    pkg-config
+    python3.pkgs.pip
+    python3.pkgs.virtualenv
     rustc
-    cargo
 
     # Gnome extensions
     gnomeExtensions.appindicator # App tray
