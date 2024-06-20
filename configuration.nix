@@ -160,6 +160,7 @@ in {
     cpuid
     curl
     direnv
+    dmidecode
     ethtool
     file
     git
@@ -233,6 +234,7 @@ in {
     keepassxc
     libreoffice
     mediainfo-gui
+    meld
     potrace
     powerline-fonts
     sane-backends
