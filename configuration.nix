@@ -259,10 +259,12 @@ in {
     gperf
     ncurses5
     ninja
+    nodejs_20
     pkg-config
     python3.pkgs.pip
     python3.pkgs.virtualenv
     rustc
+    yarn
 
     # Gnome extensions
     gnomeExtensions.appindicator # App tray
