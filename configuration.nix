@@ -272,12 +272,14 @@ in {
     cargo
     clang-tools
     cmake
+    difftastic
     flex
     gcc9
     gnumake
     go
     gperf
     hugo
+    icdiff
     ncurses5
     ninja
     nodejs_20
