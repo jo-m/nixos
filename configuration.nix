@@ -93,6 +93,7 @@ in {
   # https://nixos.wiki/wiki/GNOME#Excluding_some_GNOME_applications_from_the_default_install
   environment.gnome.excludePackages =
     (with pkgs; [
+      gnome-console # use gnome-terminal instead
       gnome-photos
       gnome-tour
     ])
@@ -230,6 +231,7 @@ in {
     glxinfo
     gnome.dconf-editor
     gnome.gnome-tweaks
+    gnome.gnome-terminal
     gnome.simple-scan
     gnome.sushi
     google-chrome
