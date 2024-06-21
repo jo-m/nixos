@@ -235,6 +235,7 @@ in {
     google-chrome
     gparted
     gpu-viewer
+    gqrx
     inkscape
     insync
     insync-nautilus
@@ -256,6 +257,7 @@ in {
     solaar
     sublime-merge-dev
     telegram-desktop
+    transmission
     usbutils
     vlc
     vscodium
@@ -264,6 +266,7 @@ in {
     xournalpp
 
     # Dev
+    android-tools
     ansible
     bison
     cargo
