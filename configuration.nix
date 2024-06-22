@@ -187,6 +187,14 @@ in {
   # $ nix search wget
   environment.systemPackages = with pkgs; let
     my-python3 = python3.withPackages (ps: with ps; [pip]);
+    # For CV
+    my-texlive = texlive.combine {
+      inherit
+        (texlive)
+        scheme-full
+        moderncv
+        ;
+    };
   in [
     # Basics
     bc
@@ -249,13 +257,13 @@ in {
     glxinfo
     graphviz
     imagemagick
+    my-texlive
     pdftk
     poppler_utils
     potrace
     qrencode
     ripgrep
     zbar
-    texlive.withPackages (with ps; [ moderncv ])
 
     # Fish
     fishPlugins.z
