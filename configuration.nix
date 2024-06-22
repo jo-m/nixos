@@ -291,6 +291,8 @@ in {
     losslesscut-bin
     mediainfo-gui
     mesa-demos
+    pkgs.libheif
+    pkgs.libheif.out
     powerline-fonts
     qgis
     signal-desktop
@@ -365,6 +367,9 @@ in {
     borgbackup
     libsecret
   ];
+
+  # Workaround to make Gnome HEIF thumbnails work
+  environment.pathsToLink = ["share/thumbnailers"];
 
   # For Gnome app indicators
   services.udev.packages = with pkgs; [gnome.gnome-settings-daemon];
