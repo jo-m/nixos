@@ -185,7 +185,9 @@ in {
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; let
+    my-python3 = python3.withPackages (ps: with ps; [pip]);
+  in [
     # Basics
     bc
     cpuid
@@ -201,6 +203,7 @@ in {
     lshw
     minicom
     moreutils
+    my-python3
     neofetch
     nettools
     openvpn
@@ -209,7 +212,6 @@ in {
     pigz
     procps
     pv
-    python3
     screen
     tmux
     unrar
@@ -253,6 +255,7 @@ in {
     qrencode
     ripgrep
     zbar
+    texlive.withPackages (with ps; [ moderncv ])
 
     # Fish
     fishPlugins.z
@@ -355,8 +358,6 @@ in {
     pkg-config
     pkgsCross.aarch64-multiplatform.buildPackages.gcc
     pngcrush
-    python3.pkgs.pip
-    python3.pkgs.virtualenv
     rustc
     sqlite
     sublime-merge-dev
