@@ -399,6 +399,16 @@ in {
     setSocketVariable = true;
   };
 
+  # Virtualbox with experimental KVM
+  virtualisation.virtualbox.host = {
+    enable = true;
+    # https://github.com/cyberus-technology/virtualbox-kvm/
+    enableKvm = true;
+    addNetworkInterface = false; # Not supported with KVM
+    enableHardening = false; # Not supported with KVM
+  };
+  users.extraGroups.vboxusers.members = [username];
+
   # Disable command-not-found, which is broken atm when using NixOS with Flakes
   # https://discourse.nixos.org/t/command-not-found-not-working/24023/5
   programs.command-not-found.enable = false;
