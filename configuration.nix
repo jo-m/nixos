@@ -26,6 +26,8 @@ in {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  # Enable memtest
+  boot.loader.systemd-boot.memtest86.enable = true;
 
   boot.initrd.luks.devices."luks-aad5ea7d-9f2e-470f-8642-d269998e034c".device = "/dev/disk/by-uuid/aad5ea7d-9f2e-470f-8642-d269998e034c";
   networking.hostName = "nixbox"; # Define your hostname.
