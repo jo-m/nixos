@@ -228,18 +228,18 @@ in {
     usbutils
 
     # User CLI utilities
-    exiftool
     bat
-    fzf
     btop
-    direnv
     chezmoi
-    ripgrep
-    imagemagick
+    direnv
+    exiftool
+    fzf
     glxinfo
+    imagemagick
     pdftk
     poppler_utils
     potrace
+    ripgrep
 
     # Fish
     fishPlugins.z
