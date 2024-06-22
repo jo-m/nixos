@@ -185,11 +185,13 @@ in {
     bc
     bcc
     bpftrace
+    bridge-utils
     chezmoi
     cpuid
     curl
     direnv
     dmidecode
+    dnsutils
     ethtool
     file
     git
@@ -204,8 +206,8 @@ in {
     minicom
     moreutils
     mycli
-    nettools
     neofetch
+    nettools
     nmap
     numactl
     openvpn
