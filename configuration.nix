@@ -71,6 +71,12 @@ in {
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
 
+  # Autologin
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = username;
+  };
+
   # Configure keymap in X11
   services.xserver = {
     xkb.layout = "us";
