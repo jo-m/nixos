@@ -364,7 +364,7 @@ in {
     pgcli
     php
     pkg-config
-    pkgsCross.aarch64-multiplatform.buildPackages.gcc
+    pkgsCross.aarch64-multiplatform.buildPackages.gcc # Provides aarch64-unknown-linux-gnu-gcc
     pngcrush
     rustc
     sqlite
