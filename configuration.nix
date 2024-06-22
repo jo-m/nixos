@@ -199,7 +199,9 @@ in {
     neofetch
     nettools
     openvpn
+    p7zip
     pbzip2
+    pigz
     procps
     pv
     python3
@@ -218,9 +220,12 @@ in {
     dmidecode
     dnsutils
     ethtool
+    f3
+    hdparm
     nmap
     numactl
     powertop
+    smartmontools
     sysstat
     tcpdump
     trace-cmd
@@ -235,16 +240,20 @@ in {
     exiftool
     fzf
     glxinfo
+    graphviz
     imagemagick
     pdftk
     poppler_utils
     potrace
+    qrencode
     ripgrep
+    zbar
 
     # Fish
     fishPlugins.z
 
     # Desktop/GUI apps
+    audacity
     baobab
     ddcui
     ddcutil
@@ -255,6 +264,15 @@ in {
     gparted
     gpu-viewer
     gqrx
+    gst_all_1.gst-libav
+    gst_all_1.gst-plugins-bad
+    gst_all_1.gst-plugins-base
+    gst_all_1.gst-plugins-good
+    gst_all_1.gst-plugins-rs
+    gst_all_1.gst-plugins-ugly
+    gst_all_1.gst-rtsp-server
+    gst_all_1.gst-vaapi
+    gst_all_1.gstreamer
     inkscape
     insync
     insync-nautilus
@@ -264,6 +282,7 @@ in {
     keepassxc
     libreoffice
     libva-utils # For vainfo (video accel)
+    linssid
     losslesscut-bin
     mediainfo-gui
     mesa-demos
@@ -276,6 +295,7 @@ in {
     vlc
     vscodium
     vulkan-tools
+    webcamoid
     wireshark
     xournalpp
 
@@ -295,33 +315,45 @@ in {
     papirus-icon-theme
 
     # Dev tools, CLI and GUI
+    aflplusplus
     android-tools
     ansible
+    apktool
+    avrdude
+    binwalk
     bison
     cargo
+    ccache
     clang-tools
     cmake
     difftastic
+    dive
     flex
     gcc9
+    gdb
+    git-lfs
     gnumake
     go
     gperf
     hugo
     icdiff
     meld
+    mitmproxy
     mycli
     ncurses5
     ninja
     nodejs_20
     pgcli
+    php
     pkg-config
     pkgsCross.aarch64-multiplatform.buildPackages.gcc
+    pngcrush
     python3.pkgs.pip
     python3.pkgs.virtualenv
     rustc
     sqlite
     sublime-merge-dev
+    valgrind
     yarn
 
     # Backup
