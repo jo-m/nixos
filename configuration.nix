@@ -183,22 +183,12 @@ in {
   environment.systemPackages = with pkgs; [
     # Basics
     bc
-    bcc
-    bpftrace
-    bridge-utils
-    chezmoi
     cpuid
     curl
-    direnv
-    dmidecode
-    dnsutils
-    ethtool
-    exiftool
     file
     git
     htop
     iftop
-    imagemagick
     iperf
     iproute2
     iw
@@ -206,42 +196,50 @@ in {
     lshw
     minicom
     moreutils
-    mycli
     neofetch
     nettools
-    nmap
-    numactl
     openvpn
     pbzip2
-    pdftk
-    pgcli
-    poppler_utils
-    powertop
     procps
     pv
     python3
-    ripgrep
     screen
-    sqlite
-    sysstat
-    tcpdump
     tmux
-    trace-cmd
-    tshark
     unrar
     util-linux
     wget
     whois
     zstd
 
-    # Fancy new CLI tools
+    # Sysadmin CLI
+    bcc
+    bpftrace
+    bridge-utils
+    dmidecode
+    dnsutils
+    ethtool
+    nmap
+    numactl
+    powertop
+    sysstat
+    tcpdump
+    trace-cmd
+    tshark
+    usbutils
+
+    # User CLI utilities
+    exiftool
     bat
     fzf
     btop
-
-    # Backup
-    libsecret
-    borgbackup
+    direnv
+    chezmoi
+    ripgrep
+    imagemagick
+    glxinfo
+    pdftk
+    poppler_utils
+    potrace
 
     # Fish
     fishPlugins.z
@@ -253,12 +251,6 @@ in {
     ffmpeg_7-full
     flameshot
     gimp-with-plugins
-    glxinfo
-    gnome.dconf-editor
-    gnome.gnome-tweaks
-    gnome.gnome-terminal
-    gnome.simple-scan
-    gnome.sushi
     google-chrome
     gparted
     gpu-viewer
@@ -274,24 +266,35 @@ in {
     libva-utils # For vainfo (video accel)
     losslesscut-bin
     mediainfo-gui
-    meld
     mesa-demos
-    potrace
     powerline-fonts
     qgis
     signal-desktop
     solaar
-    sublime-merge-dev
     telegram-desktop
     transmission
-    usbutils
     vlc
     vscodium
     vulkan-tools
     wireshark
     xournalpp
 
-    # Dev
+    # Gnome apps and extensions
+    gnome.dconf-editor
+    gnome.gnome-terminal
+    gnome.gnome-tweaks
+    gnome.simple-scan
+    gnome.sushi
+    gnomeExtensions.appindicator # App tray
+    gnomeExtensions.control-monitor-brightness-and-volume-with-ddcutil
+    gnomeExtensions.dash-to-dock # Dock
+    gnomeExtensions.ddterm # Drop down terminal
+    gnomeExtensions.logo-menu
+    gnomeExtensions.move-clock
+    gnomeExtensions.user-themes
+    papirus-icon-theme
+
+    # Dev tools, CLI and GUI
     android-tools
     ansible
     bison
@@ -306,25 +309,24 @@ in {
     gperf
     hugo
     icdiff
+    meld
+    mycli
     ncurses5
     ninja
     nodejs_20
+    pgcli
     pkg-config
     pkgsCross.aarch64-multiplatform.buildPackages.gcc
     python3.pkgs.pip
     python3.pkgs.virtualenv
     rustc
+    sqlite
+    sublime-merge-dev
     yarn
 
-    # Gnome extensions
-    gnomeExtensions.appindicator # App tray
-    gnomeExtensions.control-monitor-brightness-and-volume-with-ddcutil
-    gnomeExtensions.dash-to-dock # Dock
-    gnomeExtensions.ddterm # Drop down terminal
-    gnomeExtensions.logo-menu
-    gnomeExtensions.move-clock
-    gnomeExtensions.user-themes
-    papirus-icon-theme
+    # Backup
+    borgbackup
+    libsecret
   ];
 
   # For Gnome app indicators
