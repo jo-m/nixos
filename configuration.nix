@@ -111,6 +111,14 @@ in {
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Scanning
+  hardware.sane = {
+    enable = true;
+    brscan4 = {
+      enable = true;
+    };
+  };
+
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -254,7 +262,6 @@ in {
     potrace
     powerline-fonts
     qgis
-    sane-backends
     signal-desktop
     solaar
     sublime-merge-dev
