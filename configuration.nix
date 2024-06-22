@@ -187,7 +187,6 @@ in {
   # $ nix search wget
   environment.systemPackages = with pkgs; let
     my-python3 = python3.withPackages (ps: with ps; [pip]);
-    # For CV
     my-texlive = texlive.combine {
       inherit
         (texlive)
@@ -258,6 +257,7 @@ in {
     graphviz
     imagemagick
     my-texlive
+    qpdf # For CV
     pdftk
     poppler_utils
     potrace
