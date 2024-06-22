@@ -193,6 +193,7 @@ in {
     dmidecode
     dnsutils
     ethtool
+    exiftool
     file
     git
     htop
