@@ -205,6 +205,7 @@ in {
     moreutils
     mycli
     nettools
+    neofetch
     nmap
     numactl
     openvpn
