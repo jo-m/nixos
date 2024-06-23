@@ -310,6 +310,7 @@ in {
     solaar
     telegram-desktop
     transmission
+    transmission-gtk
     vlc
     vscodium
     vulkan-tools
