@@ -337,6 +337,7 @@ in {
     gnomeExtensions.ddterm # Drop down terminal
     gnomeExtensions.logo-menu
     gnomeExtensions.move-clock
+    gnomeExtensions.night-theme-switcher
     gnomeExtensions.user-themes
     papirus-icon-theme
 
