@@ -45,6 +45,9 @@ in {
   };
   environment.sessionVariables = {LIBVA_DRIVER_NAME = "iHD";}; # Force intel-media-driver
 
+  # Enable firmware updates
+  services.fwupd.enable = true;
+
   # DDC
   hardware.i2c.enable = true;
   boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
