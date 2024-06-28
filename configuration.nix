@@ -336,6 +336,7 @@ in {
     gnomeExtensions.control-monitor-brightness-and-volume-with-ddcutil
     gnomeExtensions.dash-to-dock # Dock
     gnomeExtensions.ddterm # Drop down terminal
+    gnomeExtensions.desktop-icons-ng-ding
     gnomeExtensions.logo-menu
     gnomeExtensions.move-clock
     gnomeExtensions.night-theme-switcher
