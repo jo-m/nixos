@@ -45,7 +45,8 @@ in {
   };
   environment.sessionVariables = {LIBVA_DRIVER_NAME = "iHD";}; # Force intel-media-driver
 
-  # Enable firmware updates
+  # Enable firmware updates.
+  # Asus does not offer updates through LVFS, but we might still be able to update stuff like SSD, Logitech receiver etc.
   services.fwupd.enable = true;
 
   # DDC
