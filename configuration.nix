@@ -387,6 +387,11 @@ in {
     # Backup
     borgbackup
     libsecret
+
+    # VPN
+    openconnect
+    networkmanager-openconnect
+    gnome.networkmanager-openconnect
   ];
 
   # Workaround to make Gnome HEIF thumbnails work
