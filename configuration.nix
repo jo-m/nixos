@@ -297,6 +297,7 @@ in {
     gst_all_1.gst-rtsp-server
     gst_all_1.gst-vaapi
     gst_all_1.gstreamer
+    imhex
     inkscape
     insync
     insync-nautilus
