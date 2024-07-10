@@ -7,6 +7,7 @@
   ...
 }: let
   username = "joni";
+  unstablePkgs = pkgs.unstable;
 in {
   imports = [
     # Include the results of the hardware scan.
@@ -303,7 +304,7 @@ in {
     insync-nautilus
     intel-gpu-tools
     iosevka
-    joplin-desktop
+    unstablePkgs.joplin-desktop # FIXME: Go back to stable after Joplin 3.x is available there
     keepassxc
     libreoffice
     libva-utils # For vainfo (video accel)
