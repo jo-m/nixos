@@ -1,6 +1,4 @@
 {
-  description = "My NixOS flake";
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
   };
@@ -8,10 +6,11 @@
   outputs = {
     self,
     nixpkgs,
-    ...
-  } @ inputs: {
+  }: let
+    system = "x86_64-linux";
+  in {
     nixosConfigurations.nixbox = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+      system = system;
       modules = [
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
@@ -19,6 +18,6 @@
       ];
     };
 
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
+    formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
   };
 }
