@@ -163,7 +163,7 @@ in {
   users.users."${username}" = {
     isNormalUser = true;
     description = username;
-    extraGroups = ["networkmanager" "wheel" "i2c" "scanner" "lp"];
+    extraGroups = ["networkmanager" "wheel" "i2c" "scanner" "lp" "dialout"];
     packages = with pkgs; [
       #  thunderbird
     ];
