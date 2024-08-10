@@ -279,6 +279,7 @@ in {
     # User CLI utilities
     bat
     btop
+    broot
     chezmoi
     direnv
     exiftool
