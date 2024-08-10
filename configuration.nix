@@ -46,6 +46,26 @@ in {
   };
   environment.sessionVariables = {LIBVA_DRIVER_NAME = "iHD";}; # Force intel-media-driver
 
+  # Intel NPU/VPU firmware
+  hardware.firmware = [
+    (
+      let
+        model = "37xx";
+        version = "v1.5.1";
+        fw-version = "v0.0";
+
+        firmware = pkgs.fetchurl {
+          url = "https://github.com/intel/linux-npu-driver/raw/${version}/firmware/bin/vpu_${model}_${fw-version}.bin";
+          hash = "sha256-KVO9EF/faYV1g2st59fIgEHqCYIgM+JhSSfzOlcA7SU=";
+        };
+      in
+        pkgs.runCommand "intel-vpu-firmware-${model}-${fw-version}" {} ''
+          mkdir -p "$out/lib/firmware/intel/vpu"
+          cp '${firmware}' "$out/lib/firmware/intel/vpu/vpu_${model}_${fw-version}.bin"
+        ''
+    )
+  ];
+
   # Enable firmware updates.
   # Asus does not offer updates through LVFS, but we might still be able to update stuff like SSD, Logitech receiver etc.
   services.fwupd.enable = true;
