@@ -237,6 +237,7 @@ in {
     iproute2
     iw
     jq
+    psmisc
     lshw
     minicom
     moreutils
