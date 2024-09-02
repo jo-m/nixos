@@ -344,6 +344,7 @@ in {
     telegram-desktop
     transmission
     transmission-gtk
+    v4l-utils
     vlc
     vscodium
     vulkan-tools
