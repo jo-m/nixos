@@ -397,12 +397,14 @@ in {
     mycli
     ncurses5
     ninja
+    numbat
     nodejs_20
     pgcli
     php
     pkg-config
     pkgsCross.aarch64-multiplatform.buildPackages.gcc # Provides aarch64-unknown-linux-gnu-gcc
     pngcrush
+    ruff
     rustc
     sqlite
     sublime-merge-dev
