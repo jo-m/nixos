@@ -237,7 +237,6 @@ in {
     iproute2
     iw
     jq
-    psmisc
     lshw
     minicom
     moreutils
@@ -249,6 +248,7 @@ in {
     pbzip2
     pigz
     procps
+    psmisc
     pv
     screen
     tmux
@@ -279,8 +279,8 @@ in {
 
     # User CLI utilities
     bat
-    btop
     broot
+    btop
     chezmoi
     direnv
     exiftool
@@ -289,10 +289,10 @@ in {
     graphviz
     imagemagick
     my-texlive
-    qpdf # For CV
     pdftk
     poppler_utils
     potrace
+    qpdf # For CV
     qrencode
     ripgrep
     zbar
@@ -311,8 +311,8 @@ in {
     google-chrome
     gparted
     gpu-viewer
-    gqrx
     gpxsee
+    gqrx
     gst_all_1.gst-libav
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-base
@@ -328,7 +328,6 @@ in {
     insync-nautilus
     intel-gpu-tools
     iosevka
-    unstablePkgs.joplin-desktop # FIXME: Go back to stable after Joplin 3.x is available there
     keepassxc
     libreoffice
     libva-utils # For vainfo (video accel)
@@ -345,6 +344,7 @@ in {
     telegram-desktop
     transmission
     transmission-gtk
+    unstablePkgs.joplin-desktop # FIXME: Go back to stable after Joplin 3.x is available there
     v4l-utils
     vlc
     vscodium
@@ -399,8 +399,8 @@ in {
     mycli
     ncurses5
     ninja
-    numbat
     nodejs_20
+    numbat
     pgcli
     php
     pkg-config
@@ -418,9 +418,9 @@ in {
     libsecret
 
     # VPN
-    openconnect
-    networkmanager-openconnect
     gnome.networkmanager-openconnect
+    networkmanager-openconnect
+    openconnect
   ];
 
   # Workaround to make Gnome HEIF thumbnails work
