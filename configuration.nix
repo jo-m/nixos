@@ -383,7 +383,7 @@ in {
     difftastic
     dive
     flex
-    gcc9
+    gcc13
     gdb
     git-lfs
     gnumake
