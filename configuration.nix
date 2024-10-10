@@ -388,6 +388,7 @@ in {
     gcc9
     gdb
     git-lfs
+    glslang
     gnumake
     go
     gperf
