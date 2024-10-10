@@ -408,7 +408,7 @@ in {
     pngcrush
     ruff
     rustc
-    sqlite
+    sqlite-interactive
     sublime-merge-dev
     valgrind
     yarn
