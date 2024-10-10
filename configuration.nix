@@ -348,7 +348,6 @@ in {
     v4l-utils
     vlc
     vscodium
-    vulkan-tools
     webcamoid
     wireshark
     xournalpp
@@ -388,7 +387,6 @@ in {
     gcc9
     gdb
     git-lfs
-    glslang
     gnumake
     go
     gperf
@@ -421,6 +419,11 @@ in {
     gnome.networkmanager-openconnect
     networkmanager-openconnect
     openconnect
+
+    # Vulkan stuff
+    glslang
+    vulkan-tools
+    vulkan-tools-lunarg
   ];
 
   # Workaround to make Gnome HEIF thumbnails work
