@@ -243,7 +243,6 @@ in {
     my-python3
     neofetch
     nettools
-    openvpn
     p7zip
     pbzip2
     pigz
@@ -419,6 +418,7 @@ in {
     gnome.networkmanager-openconnect
     networkmanager-openconnect
     openconnect
+    openvpn
 
     # Vulkan stuff
     glslang
