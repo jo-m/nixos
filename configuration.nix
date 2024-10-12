@@ -442,7 +442,9 @@ in {
     ll = null;
   };
 
-  # Rootless Docker
+  # Rootless Docker and Podman
+  virtualisation.containers.enable = true;
+  virtualisation.podman.enable = true;
   virtualisation.docker.rootless = {
     enable = true;
     setSocketVariable = true;
