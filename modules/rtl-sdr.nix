@@ -1,4 +1,4 @@
-# RTL-SDR user access.
+# RTL-SDR setup and packages.
 {
   config,
   pkgs,
@@ -14,4 +14,13 @@
   # User access.
   users.groups.plugdev = {};
   users.users."${username}".extraGroups = ["plugdev"];
+
+  # Packages
+  environment.systemPackages = with pkgs; [
+    dump1090
+    gqrx
+    multimon-ng
+    rtl_433
+    rtl-sdr
+  ];
 }
