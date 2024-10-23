@@ -32,7 +32,7 @@
     mycli
     ncurses5
     ninja
-    nodejs_20
+    nodejs_22
     numbat
     pgcli
     php
@@ -44,7 +44,6 @@
     sqlite-interactive
     sublime-merge-dev
     valgrind
-    yarn
 
     # Vulkan stuff
     glslang
