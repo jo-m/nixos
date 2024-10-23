@@ -2,6 +2,7 @@
 {
   config,
   pkgs,
+  unstablePkgs,
   ...
 }: {
   environment.systemPackages = with pkgs; [
@@ -23,7 +24,7 @@
     gdb
     git-lfs
     gnumake
-    go
+    unstablePkgs.go # We always want newest Go
     gperf
     hugo
     icdiff
