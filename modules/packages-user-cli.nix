@@ -14,6 +14,7 @@
         ;
     };
   in [
+    age
     bat
     broot
     btop
@@ -31,6 +32,7 @@
     qpdf # For CV
     qrencode
     ripgrep
+    you-get
     zbar
 
     # Fish

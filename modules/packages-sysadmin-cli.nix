@@ -27,6 +27,7 @@
     openvpn
     tcpdump
     tshark
+    trippy
 
     # Backup
     borgbackup
