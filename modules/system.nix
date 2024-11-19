@@ -25,6 +25,12 @@
       "en_US.UTF-8/UTF-8"
       "de_CH.UTF-8/UTF-8"
     ];
+
+    extraLocaleSettings = {
+      LC_MONETARY = "de_CH.UTF-8";
+      LC_TIME = "de_CH.UTF-8";
+      LC_NUMERIC = "de_CH.UTF-8";
+    };
   };
 
   # Disable the default NixOS shell aliases
