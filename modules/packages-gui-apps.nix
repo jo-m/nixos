@@ -50,9 +50,9 @@
     signal-desktop
     solaar
     telegram-desktop
-    transmission
-    transmission-gtk
-    unstablePkgs.joplin-desktop # FIXME: Go back to stable after Joplin 3.x is available there
+    transmission_4
+    transmission_4-gtk
+    joplin-desktop
     v4l-utils
     vlc
     vscodium

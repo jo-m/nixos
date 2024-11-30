@@ -5,11 +5,11 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    gnome.dconf-editor
-    gnome.gnome-terminal
-    gnome.gnome-tweaks
-    gnome.simple-scan
-    gnome.sushi
+    dconf-editor
+    gnome-terminal
+    gnome-tweaks
+    simple-scan
+    sushi
     gnomeExtensions.appindicator # App tray
     gnomeExtensions.control-monitor-brightness-and-volume-with-ddcutil
     gnomeExtensions.dash-to-dock # Dock
@@ -22,7 +22,6 @@
     papirus-icon-theme
 
     # VPN
-    gnome.networkmanager-openconnect
     networkmanager-openconnect
   ];
 }

@@ -37,7 +37,7 @@
       gnome-photos
       gnome-tour
     ])
-    ++ (with pkgs.gnome; [
+    ++ (with pkgs; [
       atomix # puzzle game
       epiphany # web browser
       geary # email reader
@@ -64,7 +64,7 @@
   environment.pathsToLink = ["share/thumbnailers"];
 
   # For Gnome app indicators
-  services.udev.packages = with pkgs; [gnome.gnome-settings-daemon];
+  services.udev.packages = [pkgs.gnome-settings-daemon];
 
   # For Solaar
   hardware.logitech.wireless.enable = true;
