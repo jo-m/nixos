@@ -28,6 +28,7 @@
     tcpdump
     tshark
     trippy
+    ssh-audit
 
     # Backup
     borgbackup
