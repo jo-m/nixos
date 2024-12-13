@@ -40,8 +40,7 @@
 
   # DDC
   hardware.i2c.enable = true;
-  # FIXME: ddcci-driver failed to build at the time, check if it can be enabled again.
-  # boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
+  boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
   boot.kernelModules = ["i2c-dev" "ddcci_backlight"];
   users.users."${username}".extraGroups = ["i2c"];
 }
