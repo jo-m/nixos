@@ -1,0 +1,18 @@
+/*
+From https://gitlab.gnome.org/GNOME/gnome-shell-extensions/-/blob/main/extensions/system-monitor/stylesheet.css,
+modified for monospace font.
+*/
+
+.system-monitor-stat-section {
+  padding: 0 6px;
+  font-family: monospace;
+}
+
+.system-monitor-stat-section-icon {icon-size: 1.08em;}
+.system-monitor-stat-section-label {
+  min-width: 3.0em;
+  font-size: 0.9em;
+ }
+.system-monitor-placeholder {-st-icon-style: symbolic;}
+
+.panel-button .high-usage {color: #ff7800;}

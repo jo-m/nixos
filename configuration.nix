@@ -13,6 +13,10 @@ in {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  nixpkgs.overlays = [
+    (import ./overlays/gnome-ext-system-monitor.nix)
+  ];
+
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix

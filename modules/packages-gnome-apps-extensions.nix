@@ -18,6 +18,7 @@
     gnomeExtensions.logo-menu
     gnomeExtensions.move-clock
     gnomeExtensions.night-theme-switcher
+    gnomeExtensions.system-monitor
     gnomeExtensions.user-themes
     papirus-icon-theme
 
