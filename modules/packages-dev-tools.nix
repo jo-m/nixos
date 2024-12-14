@@ -46,9 +46,24 @@
     sublime-merge-dev
     valgrind
 
-    # Vulkan stuff
+    # Vulkan basic tools and dependencies
     glslang
+    shaderc # glslc
+    vulkan-headers
+    vulkan-loader
+    vulkan-validation-layers
+
+    # More Vulkan tools
+    vulkan-extension-layer
     vulkan-tools
     vulkan-tools-lunarg
+    vulkan-volk
+
+    # Intel GPU
+    level-zero
+    mkl
+    oneDNN
+    openvino
+    vpl-gpu-rt
   ];
 }
