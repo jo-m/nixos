@@ -13,7 +13,6 @@
     description = username;
     extraGroups = ["networkmanager" "wheel" "dialout"];
     packages = with pkgs; [];
-    shell = pkgs.fish;
   };
 
   security.sudo.extraRules = [

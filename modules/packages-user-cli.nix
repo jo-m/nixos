@@ -35,11 +35,13 @@
     you-get
     zbar
 
-    # Fish
+    # z for Fish
     fishPlugins.z
   ];
 
-  # Fish
+  # Fish - do not set it as login shell, but let bash
+  # execute it in interactive mode.
+  # See https://nixos.wiki/wiki/Fish#Setting_fish_as_your_shell.
   programs.fish.enable = true;
   programs.bash = {
     interactiveShellInit = ''
