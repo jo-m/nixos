@@ -1,4 +1,4 @@
-# Custom CSS file for system monitor (monospace font).
+# Custom CSS and number formatting for gnome-shell system-monitor extension.
 final: prev: {
   gnomeExtensions =
     prev.gnomeExtensions
