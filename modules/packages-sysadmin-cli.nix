@@ -12,6 +12,7 @@
     ethtool
     f3
     hdparm
+    lsof
     numactl
     powertop
     smartmontools
