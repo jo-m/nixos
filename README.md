@@ -27,11 +27,9 @@ nix flake update
 nixos-rebuild switch
 
 # List and clean up previous generations
-nix-store --gc --print-roots
 nix-env --list-generations --profile /nix/var/nix/profiles/system
-nix-env --delete-generations 10d
-# or
-nix-collect-garbage --delete-older-than 1d
+nix-env --delete-generations 30d
+nix-store --gc
 ```
 
 ## How this Git repo was initialized
