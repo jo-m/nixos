@@ -33,8 +33,7 @@
     mycli
     ncurses5
     ninja
-    # TODO: re-enable
-    # nodejs_22
+    nodejs_22
     numbat
     pgcli
     php
