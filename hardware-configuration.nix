@@ -43,4 +43,7 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+  # Enable flashing of QMK keyboards for non-root.
+  hardware.keyboard.qmk.enable = true;
 }
