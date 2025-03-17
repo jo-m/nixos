@@ -43,6 +43,7 @@
     ruff
     rustc
     sqlite-interactive
+    sqlitebrowser
     sublime-merge-dev
     valgrind
 
