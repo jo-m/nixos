@@ -38,6 +38,7 @@ in {
     ./modules/packages-user-cli.nix
     ./modules/packages-gui-apps.nix
     ./modules/packages-ml.nix
+    ./modules/tailscale.nix
 
     # Extra args passed to the modules.
     {
