@@ -1,6 +1,9 @@
 # Setup:
-#
 #   sudo tailscale up
+#
+# Funnel: https://tailscale.com/kb/1223/funnel
+#   sudo tailscale funnel http://localhost:2345
+#
 {
   config,
   pkgs,
