@@ -6,10 +6,11 @@
   ...
 }: {
   environment.systemPackages = with unstablePkgs; [
-    (llama-cpp.override
-      {vulkanSupport = true;})
-
-    (whisper-cpp-vulkan.override
-      {vulkanSupport = false;})
+    # Temporarily disabled due to build error on NixOS 25.05
+    #    (llama-cpp.override
+    #      {vulkanSupport = true;})
+    #
+    #    (whisper-cpp-vulkan.override
+    #      {vulkanSupport = false;})
   ];
 }
