@@ -47,6 +47,9 @@
     sublime-merge-dev
     valgrind
 
+    # Hardware
+    tio
+
     # Vulkan basic tools and dependencies
     glslang
     shaderc # glslc
