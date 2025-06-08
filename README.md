@@ -2,6 +2,8 @@
 
 Hardware: ASUS Zenbook 14 OLED (UX3405M) 2024
 
+Note that dotfiles are managed in a [separate repo via chezmoi](https://github.com/jo-m/dotfiles), to maintain easy compatibility with OSes other than NixOS.
+
 ## Editing and applying the config
 
 ```bash
