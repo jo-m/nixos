@@ -43,4 +43,18 @@
   # Disable command-not-found, which is broken atm when using NixOS with Flakes
   # https://discourse.nixos.org/t/command-not-found-not-working/24023/5
   programs.command-not-found.enable = false;
+
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "daily";
+      options = "delete-older-than 30d";
+      persistent = false;
+    };
+
+    optimise = {
+      automatic = true;
+      dates = ["weekly"];
+    };
+  };
 }
