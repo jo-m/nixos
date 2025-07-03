@@ -2,6 +2,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   # Kernel
@@ -11,11 +12,19 @@
     # Maybe later: "zswap.enabled=1"
   ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
+  environment.systemPackages = [
+    # For debugging and troubleshooting Secure Boot.
+    pkgs.sbctl
+  ];
+
+  # Bootloader and secure boot.
+  # https://github.com/nix-community/lanzaboote/blob/v0.4.2/docs/QUICK_START.md
+  boot.loader.systemd-boot.enable = lib.mkForce false;
   boot.loader.efi.canTouchEfiVariables = true;
-  # Enable memtest
-  boot.loader.systemd-boot.memtest86.enable = true;
+  boot.lanzaboote = {
+    enable = true;
+    pkiBundle = "/var/lib/sbctl";
+  };
 
   boot.initrd.luks.devices."luks-aad5ea7d-9f2e-470f-8642-d269998e034c".device = "/dev/disk/by-uuid/aad5ea7d-9f2e-470f-8642-d269998e034c";
 }
