@@ -18,6 +18,7 @@
     smartmontools
     sysstat
     trace-cmd
+    tpm2-tools
     usbutils
 
     # Networking
