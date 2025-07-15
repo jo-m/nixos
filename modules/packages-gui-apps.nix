@@ -37,6 +37,7 @@
     intel-gpu-tools
     iosevka
     keepassxc
+    git-credential-keepassxc
     libreoffice
     libva-utils # For vainfo (video accel)
     linssid
