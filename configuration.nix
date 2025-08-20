@@ -37,7 +37,6 @@ in {
     ./modules/packages-sysadmin-cli.nix
     ./modules/packages-user-cli.nix
     ./modules/packages-gui-apps.nix
-    ./modules/packages-ml.nix
 
     # Extra args passed to the modules.
     {
