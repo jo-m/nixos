@@ -24,7 +24,7 @@
     gdb
     git-lfs
     gnumake
-    unstablePkgs.go_1_24 # We always want the newest Go
+    unstablePkgs.go_1_25 # We always want the newest Go
     gperf
     hugo
     icdiff
