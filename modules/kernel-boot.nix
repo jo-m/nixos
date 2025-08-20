@@ -9,7 +9,8 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [
     "mitigations=off"
-    # Maybe later: "zswap.enabled=1"
+    "zswap.enabled=1"
+    "zswap.compressor=lz4"
   ];
 
   environment.systemPackages = [
