@@ -18,7 +18,7 @@ in {
   ];
 
   imports = [
-    # Include the results of the hardware scan.
+    # Include the results of the hardware scan (`nixos-generate-config`).
     ./hardware-configuration.nix
 
     # User modules.
