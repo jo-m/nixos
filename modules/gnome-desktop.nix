@@ -35,14 +35,33 @@
       gnome-tour
     ])
     ++ (with pkgs; [
-      atomix # puzzle game
       epiphany # web browser
       geary # email reader
       gnome-music
-      hitori # sudoku game
-      iagno # go game
-      tali # poker game
       totem # video player
+
+      decibels
+      yelp
+      aisleriot
+      atomix
+      five-or-more
+      four-in-a-row
+      gnome-2048
+      gnome-chess
+      gnome-klotski
+      gnome-mahjongg
+      gnome-mines
+      gnome-nibbles
+      gnome-robots
+      gnome-sudoku
+      gnome-taquin
+      gnome-tetravex
+      hitori
+      iagno
+      lightsoff
+      quadrapassel
+      swell-foop
+      tali
     ]);
 
   # Enable sound with pipewire.
