@@ -14,7 +14,7 @@
     ddcui
     ddcutil
     ffmpeg_7-full
-    flameshot
+    (flameshot.override {enableWlrSupport = true;})
     gimp-with-plugins
     google-chrome
     gparted
