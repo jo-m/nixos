@@ -15,6 +15,7 @@ in {
 
   nixpkgs.overlays = [
     (import ./overlays/gnome-ext-system-monitor.nix)
+    (import ./overlays/flameshot.nix)
   ];
 
   imports = [
