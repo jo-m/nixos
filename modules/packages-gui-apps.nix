@@ -11,6 +11,7 @@
   environment.systemPackages = with pkgs; [
     audacity
     baobab
+    blobdrop
     ddcui
     ddcutil
     ffmpeg_7-full
