@@ -30,8 +30,7 @@ nixos-rebuild switch
 
 # List and clean up previous generations
 nixos-rebuild list-generations
-nix profile wipe-history --profile /nix/var/nix/profile/system --older-than 14d
-nix-collect-garbage
+nix-collect-garbage --delete-older-than 30d
 ```
 
 ## How this Git repo was initialized
