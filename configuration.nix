@@ -26,6 +26,7 @@ in {
     ./modules/kernel-boot.nix
     ./modules/hardware.nix
     ./modules/system.nix
+    ./modules/monitoring.nix
     ./modules/user.nix
     ./modules/gnome-desktop.nix
     ./modules/printscan.nix
