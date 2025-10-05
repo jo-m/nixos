@@ -7,17 +7,15 @@ Note that dotfiles are managed in a [separate repo via chezmoi](https://github.c
 ## Editing and applying the config
 
 ```bash
-$EDITOR /etc/nixos/configuration.nix
-
 # Switch immediately
-nixos-rebuild switch
+sudo nixos-rebuild switch --flake . -L
 # Switch only after next boot
-nixos-rebuild boot
+sudo nixos-rebuild boot --flake . -L
 # Test
-nixos-rebuild test
+sudo nixos-rebuild test --flake . -L
 
 # After switching hostname
-nixos-rebuild switch --flake .#nixbox
+sudo nixos-rebuild switch --flake .#nixbox
 ```
 
 ## Upgrade and cleanup
@@ -41,4 +39,7 @@ git config --global init.defaultBranch main
 git init
 git config --global user.email "root@localhost"
 git config --global user.name "root"
+
+# Re-generate hardware config
+nixos-generate-config --dir .
 ```
