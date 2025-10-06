@@ -42,7 +42,7 @@ in {
     # https://github.com/NixOS/nixpkgs/blob/nixos-24.05/nixos/modules/services/monitoring/prometheus/exporters.nix
     enabledCollectors = ["systemd"];
     # nix-shell -p prometheus-node-exporter --command 'node_exporter --help'
-    extraFlags = ["--collector.systemd"];
+    extraFlags = [];
   };
 
   # https://wiki.nixos.org/wiki/Prometheus
