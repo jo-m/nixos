@@ -20,6 +20,7 @@
     ./modules/system.nix
     ./modules/monitoring.nix
     ./modules/user.nix
+    ./modules/backup.nix
     ./modules/gnome-desktop.nix
     ./modules/printscan.nix
     ./modules/virt.nix
