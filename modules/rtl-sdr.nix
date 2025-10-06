@@ -3,7 +3,6 @@
   config,
   pkgs,
   unstablePkgs,
-  username,
   ...
 }: {
   # Driver setup.
@@ -12,7 +11,7 @@
 
   # User access.
   users.groups.plugdev = {};
-  users.users."${username}".extraGroups = ["plugdev"];
+  users.users.${config.custom.unprivilegedUser}.extraGroups = ["plugdev"];
 
   # Packages
   environment.systemPackages = with pkgs; [

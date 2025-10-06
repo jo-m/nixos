@@ -2,7 +2,6 @@
 {
   config,
   pkgs,
-  username,
   ...
 }: {
   environment.systemPackages = with pkgs; let
@@ -54,7 +53,9 @@
   };
 
   # Syncthing
-  services.syncthing = {
+  services.syncthing = let
+    username = config.custom.unprivilegedUser;
+  in {
     enable = true;
     user = username;
     dataDir = "/home/${username}/Sync"; # Default folder for new synced folders

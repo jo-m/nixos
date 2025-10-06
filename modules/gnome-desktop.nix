@@ -3,7 +3,6 @@
   config,
   pkgs,
   unstablePkgs,
-  username,
   ...
 }: {
   # Enable the X11 windowing system.
@@ -16,7 +15,7 @@
   # Autologin
   services.displayManager.autoLogin = {
     enable = true;
-    user = username;
+    user = config.custom.unprivilegedUser;
   };
 
   # Configure keymap in X11

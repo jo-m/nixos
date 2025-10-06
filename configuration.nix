@@ -1,20 +1,14 @@
 {
   config,
   pkgs,
+  options,
+  lib,
   ...
-}: let
-  username = "joni";
-in {
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # Flakes
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-
-  nixpkgs.overlays = [
-    (import ./overlays/gnome-ext-system-monitor.nix)
-    (import ./overlays/flameshot.nix)
-  ];
+}: {
+  options.custom.unprivilegedUser = lib.mkOption {
+    type = lib.types.str;
+    default = "joni";
+  };
 
   imports = [
     # Include the results of the hardware scan (`nixos-generate-config`).
@@ -37,12 +31,20 @@ in {
     ./modules/packages-sysadmin-cli.nix
     ./modules/packages-user-cli.nix
     ./modules/packages-gui-apps.nix
-
-    # Extra args passed to the modules.
-    {
-      _module.args = {inherit username;};
-    }
   ];
 
-  system.stateVersion = "24.05"; # Did you read the comment?
+  config = {
+    # Allow unfree packages
+    nixpkgs.config.allowUnfree = true;
+
+    # Flakes
+    nix.settings.experimental-features = ["nix-command" "flakes"];
+
+    nixpkgs.overlays = [
+      (import ./overlays/gnome-ext-system-monitor.nix)
+      (import ./overlays/flameshot.nix)
+    ];
+
+    system.stateVersion = "24.05"; # Did you read the comment?
+  };
 }

@@ -3,7 +3,6 @@
   config,
   pkgs,
   unstablePkgs,
-  username,
   ...
 }: {
   # Enable CUPS to print documents.
@@ -17,5 +16,5 @@
     };
   };
 
-  users.users."${username}".extraGroups = ["lp" "scanner"];
+  users.users.${config.custom.unprivilegedUser}.extraGroups = ["lp" "scanner"];
 }

@@ -3,7 +3,6 @@
   config,
   pkgs,
   unstablePkgs,
-  username,
   ...
 }: let
   grafana-domain = "monitor";

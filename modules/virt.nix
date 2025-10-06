@@ -3,9 +3,10 @@
   config,
   pkgs,
   unstablePkgs,
-  username,
   ...
-}: {
+}: let
+  username = config.custom.unprivilegedUser;
+in {
   # Rootless Docker and Podman
   virtualisation.containers.enable = true;
   virtualisation.podman.enable = true;
