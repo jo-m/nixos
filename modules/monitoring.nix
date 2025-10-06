@@ -3,7 +3,6 @@
   config,
   pkgs,
   unstablePkgs,
-  hostname,
   username,
   ...
 }: let

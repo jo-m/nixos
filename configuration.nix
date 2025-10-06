@@ -4,8 +4,6 @@
   ...
 }: let
   username = "joni";
-  hostname = "nixbox";
-  unstablePkgs = pkgs.unstable;
 in {
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -42,7 +40,7 @@ in {
 
     # Extra args passed to the modules.
     {
-      _module.args = {inherit unstablePkgs username hostname;};
+      _module.args = {inherit username;};
     }
   ];
 

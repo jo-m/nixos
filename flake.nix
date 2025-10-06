@@ -15,22 +15,22 @@
     lanzaboote,
   }: let
     system = "x86_64-linux";
+    hostname = "nixbox";
   in {
-    nixosConfigurations.nixbox = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
       system = system;
       modules = [
         lanzaboote.nixosModules.lanzaboote
 
-        ({pkgs, ...}: {
-          imports = [./configuration.nix];
+        ./configuration.nix
 
-          nixpkgs.overlays = [
-            (final: prev: {
-              unstable = unstable.legacyPackages.${system};
-            })
-          ];
+        ({pkgs, ...}: {
+          networking.hostName = hostname;
         })
       ];
+      specialArgs = {
+        unstablePkgs = unstable.legacyPackages.${system};
+      };
     };
 
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;

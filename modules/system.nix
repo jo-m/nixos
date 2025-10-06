@@ -2,13 +2,11 @@
 {
   config,
   pkgs,
-  hostname,
   username,
   ...
 }: {
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostName = hostname;
 
   # Enable firmware updates.
   # Asus does not offer updates through LVFS, but we might still be able to update stuff like SSD, Logitech receiver etc.
