@@ -13,6 +13,7 @@ sudo nixos-rebuild switch --flake . -L
 sudo nixos-rebuild boot --flake . -L
 # Test
 sudo nixos-rebuild test --flake . -L
+sudo nixos-rebuild build --flake . -L
 
 # After switching hostname
 sudo nixos-rebuild switch --flake .#nixbox

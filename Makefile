@@ -1,7 +1,7 @@
 .PHONY: upgrade
 upgrade:
 	nix flake update
-	nixos-rebuild switch
+	sudo nixos-rebuild switch --flake . -L
 	git add flake.lock
 	git commit -m 'upgrade'
 
