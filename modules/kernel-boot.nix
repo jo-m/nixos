@@ -9,9 +9,12 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelParams = [
     "mitigations=off"
-    "zswap.enabled=1"
-    "zswap.compressor=lz4"
   ];
+
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+  };
 
   environment.systemPackages = [
     # For debugging and troubleshooting Secure Boot.
