@@ -22,7 +22,6 @@
     minicom
     moreutils
     my-python3
-    neofetch
     nettools
     p7zip
     pbzip2

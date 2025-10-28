@@ -48,7 +48,7 @@
     pkgs.libheif
     pkgs.libheif.out
     powerline-fonts
-    qgis
+    #qgis
     signal-desktop
     solaar
     telegram-desktop

@@ -64,10 +64,10 @@
     vulkan-volk
 
     # Intel GPU
-    level-zero
-    mkl
-    oneDNN
-    openvino
-    vpl-gpu-rt
+    #level-zero
+    #mkl
+    #oneDNN
+    #openvino
+    #vpl-gpu-rt
   ];
 }

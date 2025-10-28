@@ -25,25 +25,25 @@ in {
   };
   users.extraGroups.vboxusers.members = [username];
 
-  # # Libvirtd, virsh etc.
-  # virtualisation.libvirtd = {
-  #   enable = true;
-  #   qemu = {
-  #     package = pkgs.qemu_kvm;
-  #     runAsRoot = true;
-  #     swtpm.enable = true;
-  #     ovmf = {
-  #       enable = true;
-  #       packages = [
-  #         (pkgs.OVMF.override {
-  #           secureBoot = true;
-  #           tpmSupport = true;
-  #         }).fd
-  #       ];
-  #     };
-  #   };
-  # };
-  # environment.systemPackages = with pkgs; [libguestfs-with-appliance guestfs-tools];
-  # users.extraGroups.libvirtd.members = [username];
-  # programs.virt-manager.enable = true;
+  # Libvirtd, virsh etc.
+  #virtualisation.libvirtd = {
+  #  enable = true;
+  #  qemu = {
+  #    package = pkgs.qemu_kvm;
+  #    runAsRoot = true;
+  #    swtpm.enable = true;
+  #    ovmf = {
+  #      enable = true;
+  #      packages = [
+  #        (pkgs.OVMF.override {
+  #          secureBoot = true;
+  #          tpmSupport = true;
+  #        }).fd
+  #      ];
+  #    };
+  #  };
+  #};
+  #environment.systemPackages = with pkgs; [libguestfs-with-appliance guestfs-tools];
+  #users.extraGroups.libvirtd.members = [username];
+  #programs.virt-manager.enable = true;
 }
