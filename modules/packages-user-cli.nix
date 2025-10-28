@@ -32,6 +32,7 @@
     qrencode
     ripgrep
     zbar
+    up
 
     # z for Fish
     fishPlugins.z
