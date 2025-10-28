@@ -1,4 +1,5 @@
 # Grafana and Prometheus.
+# Default login is admin:admin.
 {
   config,
   pkgs,
