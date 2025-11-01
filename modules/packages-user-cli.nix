@@ -21,14 +21,13 @@
     direnv
     exiftool
     fzf
-    #glxinfo
+    glxinfo
     graphviz
     imagemagick
-    #my-texlive
-    #pdftk
-    #poppler_utils
-    #potrace
-    #qpdf # For CV
+    pdftk
+    poppler_utils
+    potrace
+    typst
     qrencode
     ripgrep
     zbar
