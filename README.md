@@ -44,3 +44,15 @@ git config --global user.name "root"
 # Re-generate hardware config
 nixos-generate-config --dir .
 ```
+
+### Debug store size
+
+```bash
+nix build .#nixosConfigurations.nixbox.config.system.build.toplevel
+# Show size of store paths sorted by size.
+nix path-info --recursive --size ./result | sort -nk2
+# Show total size.
+nix path-info --closure-size --human-readable ./result
+```
+
+https://nixcademy.com/posts/minimizing-nixos-images/
