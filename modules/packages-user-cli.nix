@@ -28,12 +28,14 @@
     poppler_utils
     potrace
     typst
+    tinymist
     qrencode
     ripgrep
     zbar
     up
 
     # z for Fish
+    fishPlugins.pisces
     fishPlugins.z
   ];
 

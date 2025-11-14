@@ -11,7 +11,6 @@
     cpuid
     curl
     file
-    git
     htop
     iftop
     iperf

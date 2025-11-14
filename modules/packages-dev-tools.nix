@@ -23,6 +23,10 @@
     gcc13
     gdb
     git-lfs
+    gitFull
+    gitui
+    lazygit
+    fzf-make
     gnumake
     unstablePkgs.go_1_25 # We always want the newest Go
     gperf
