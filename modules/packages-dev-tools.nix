@@ -44,7 +44,7 @@
     lazygit
     fzf-make
     gnumake
-    unstablePkgs.go_1_25 # We always want the newest Go
+    unstablePkgs.go # We always want the newest Go
     gperf
     hugo
     icdiff
