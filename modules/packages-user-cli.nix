@@ -19,6 +19,7 @@
     btop
     chezmoi
     direnv
+    duf
     exiftool
     fzf
     glxinfo
@@ -27,14 +28,13 @@
     pdftk
     poppler_utils
     potrace
-    typst
-    tinymist
     qrencode
     ripgrep
-    zbar
+    tinymist
+    typst
     up
+    zbar
 
-    # z for Fish
     fishPlugins.pisces
     fishPlugins.z
   ];
