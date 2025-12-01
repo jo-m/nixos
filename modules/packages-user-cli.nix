@@ -18,15 +18,14 @@
     broot
     btop
     chezmoi
-    direnv
     duf
     exiftool
     fzf
-    glxinfo
     graphviz
     imagemagick
+    mesa-demos
     pdftk
-    poppler_utils
+    poppler-utils
     potrace
     qrencode
     ripgrep
@@ -38,6 +37,9 @@
     fishPlugins.pisces
     fishPlugins.z
   ];
+
+  # https://github.com/nix-community/nix-direnv
+  programs.direnv.enable = true;
 
   # Fish - do not set it as login shell, but let bash
   # execute it in interactive mode.

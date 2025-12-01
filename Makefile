@@ -13,3 +13,7 @@ pullpush:
 .PHONY: format
 format:
 	nix fmt .
+
+.PHONY: build
+build:
+	nixos-rebuild build --flake . -L

@@ -15,7 +15,7 @@
 
   # Packages
   environment.systemPackages = with pkgs; [
-    dump1090
+    dump1090-fa
     gqrx
     multimon-ng
     rtl_433

@@ -55,4 +55,9 @@
       dates = ["weekly"];
     };
   };
+
+  services.angrr = {
+    enable = true;
+    period = "2months";
+  };
 }
