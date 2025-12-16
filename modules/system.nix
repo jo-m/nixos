@@ -2,6 +2,7 @@
 {
   config,
   pkgs,
+  lib,
   username,
   ...
 }: {
@@ -41,6 +42,13 @@
   # Disable command-not-found, which is broken atm when using NixOS with Flakes
   # https://discourse.nixos.org/t/command-not-found-not-working/24023/5
   programs.command-not-found.enable = false;
+
+  # Compact database from time to time.
+  systemd.services.nix-daemon.serviceConfig = {
+    ExecStartPre = "-${lib.getBin pkgs.sqlite}/bin/sqlite3 /nix/var/nix/db/db.sqlite VACUUM";
+    # Default 90s may not be enough.
+    TimeoutStartSec = "infinity";
+  };
 
   nix = {
     gc = {
