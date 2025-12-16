@@ -23,6 +23,10 @@
     papirus-icon-theme
   ];
 
+  nixpkgs.overlays = [
+    (import ./overlays/gnome-ext-system-monitor.nix)
+  ];
+
   # VPN
   networking.networkmanager.plugins = with pkgs; [
     networkmanager-openconnect
