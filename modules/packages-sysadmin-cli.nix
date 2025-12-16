@@ -27,6 +27,8 @@
     nmap
     openconnect
     openvpn
+    openvpn3
+    openvpn-auth-ldap
     tcpdump
     tshark
     trippy

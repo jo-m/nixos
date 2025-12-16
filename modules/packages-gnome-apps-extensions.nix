@@ -21,8 +21,11 @@
     gnomeExtensions.system-monitor
     gnomeExtensions.user-themes
     papirus-icon-theme
+  ];
 
-    # VPN
+  # VPN
+  networking.networkmanager.plugins = with pkgs; [
     networkmanager-openconnect
+    networkmanager-openvpn
   ];
 }
