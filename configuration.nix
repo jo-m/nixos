@@ -43,7 +43,6 @@
 
     nixpkgs.overlays = [
       (import ./overlays/gnome-ext-system-monitor.nix)
-      (import ./overlays/flameshot.nix)
     ];
 
     system.stateVersion = "24.05"; # Did you read the comment?

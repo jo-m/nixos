@@ -15,7 +15,7 @@
     ddcui
     ddcutil
     ffmpeg_7-full
-    flameshot-wayland # From overlay.
+    flameshot
     gimp-with-plugins
     google-chrome
     gparted
