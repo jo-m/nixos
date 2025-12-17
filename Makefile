@@ -1,3 +1,8 @@
+
+.PHONY: switch
+switch:
+	sudo nixos-rebuild switch --flake . -L
+
 .PHONY: upgrade
 upgrade:
 	nix flake update
