@@ -24,7 +24,7 @@
   ];
 
   nixpkgs.overlays = [
-    (import ./overlays/gnome-ext-system-monitor.nix)
+    (import ../overlays/gnome-ext-system-monitor.nix)
   ];
 
   # VPN
