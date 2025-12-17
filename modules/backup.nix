@@ -42,7 +42,7 @@
       uid="$(id -u ${config.custom.unprivilegedUser})"
 
       # https://wiki.gnome.org/Projects/GnomeKeyring/Ssh
-      SSH_AUTH_SOCK="/run/user/$uid/keyring/ssh"
+      SSH_AUTH_SOCK="/run/user/$uid/gcr/ssh"
       export SSH_AUTH_SOCK
 
       sudo -u ${config.custom.unprivilegedUser} --preserve-env=SSH_AUTH_SOCK ssh "$@"
