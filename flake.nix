@@ -13,12 +13,17 @@
     nixpkgs,
     unstable,
     lanzaboote,
+    ...
   }: let
     system = "x86_64-linux";
     hostname = "nixbox";
+    unstablePkgs = import unstable {
+      inherit system;
+      config.allowUnfree = true;
+    };
   in {
     nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
-      system = system;
+      inherit system;
       modules = [
         lanzaboote.nixosModules.lanzaboote
 
@@ -29,7 +34,7 @@
         })
       ];
       specialArgs = {
-        unstablePkgs = unstable.legacyPackages.${system};
+        inherit unstablePkgs;
       };
     };
 

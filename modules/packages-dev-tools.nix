@@ -89,5 +89,8 @@
     #oneDNN
     #openvino
     #vpl-gpu-rt
+
+    # Vibing
+    unstablePkgs.claude-code
   ];
 }
