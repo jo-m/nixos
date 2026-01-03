@@ -16,7 +16,9 @@
     ddcutil
     ffmpeg_7-full
     flameshot
+    foliate
     gimp-with-plugins
+    git-credential-keepassxc
     google-chrome
     gparted
     gpu-viewer
@@ -38,7 +40,6 @@
     intel-gpu-tools
     iosevka
     keepassxc
-    git-credential-keepassxc
     libreoffice
     libva-utils # For vainfo (video accel)
     linssid
