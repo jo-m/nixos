@@ -23,16 +23,16 @@
       let
         model = "37xx";
         version = "v1.5.1";
-        fw-version = "v0.0";
+        fwVersion = "v0.0";
 
         firmware = pkgs.fetchurl {
-          url = "https://github.com/intel/linux-npu-driver/raw/${version}/firmware/bin/vpu_${model}_${fw-version}.bin";
+          url = "https://github.com/intel/linux-npu-driver/raw/${version}/firmware/bin/vpu_${model}_${fwVersion}.bin";
           hash = "sha256-KVO9EF/faYV1g2st59fIgEHqCYIgM+JhSSfzOlcA7SU=";
         };
       in
-        pkgs.runCommand "intel-vpu-firmware-${model}-${fw-version}" {} ''
+        pkgs.runCommand "intel-vpu-firmware-${model}-${fwVersion}" {} ''
           mkdir -p "$out/lib/firmware/intel/vpu"
-          cp '${firmware}' "$out/lib/firmware/intel/vpu/vpu_${model}_${fw-version}.bin"
+          cp '${firmware}' "$out/lib/firmware/intel/vpu/vpu_${model}_${fwVersion}.bin"
         ''
     )
   ];

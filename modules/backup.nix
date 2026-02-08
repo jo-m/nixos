@@ -7,8 +7,8 @@
   unstablePkgs,
   ...
 }: let
-  borg-repo-key-keepass-url = "borg-passphrase://backup";
-  borg-print-repo-key = pkgs.writeShellApplication {
+  borgRepoKeyKeepassUrl = "borg-passphrase://backup";
+  borgPrintRepoKey = pkgs.writeShellApplication {
     name = "borg-print-repo-key";
 
     runtimeInputs = with pkgs; [
@@ -25,12 +25,12 @@
 
       home="$(getent passwd ${config.custom.unprivilegedUser} | cut -d: -f6)"
 
-      echo 'url=${borg-repo-key-keepass-url}' \
+      echo 'url=${borgRepoKeyKeepassUrl}' \
         | git-credential-keepassxc --config "$home/.config/git-credential-keepassxc" get \
         | sed -n 's/^password=//p'
     '';
   };
-  borg-rsh = pkgs.writeShellApplication {
+  borgRsh = pkgs.writeShellApplication {
     name = "borg-rsh";
 
     runtimeInputs = with pkgs; [
@@ -51,7 +51,7 @@
 in {
   # Export this for the backup scripts.
   environment.systemPackages = [
-    borg-print-repo-key
-    borg-rsh
+    borgPrintRepoKey
+    borgRsh
   ];
 }

@@ -5,7 +5,7 @@
   ...
 }: {
   environment.systemPackages = with pkgs; let
-    my-python3 = python3.withPackages (ps: with ps; [pip]);
+    myPython3 = python3.withPackages (ps: with ps; [pip]);
   in [
     bc
     cpuid
@@ -20,7 +20,7 @@
     lshw
     minicom
     moreutils
-    my-python3
+    myPython3
     nettools
     p7zip
     pbzip2

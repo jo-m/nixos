@@ -5,7 +5,7 @@
   ...
 }: {
   environment.systemPackages = with pkgs; let
-    my-texlive = texlive.combine {
+    myTexlive = texlive.combine {
       inherit
         (texlive)
         scheme-full

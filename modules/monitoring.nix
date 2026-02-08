@@ -6,16 +6,16 @@
   unstablePkgs,
   ...
 }: let
-  grafana-domain = "monitor";
-  grafana-port = 20000;
-  prom-port = 20001;
-  prom-node-port = 20002;
+  grafanaDomain = "monitor";
+  grafanaPort = 20000;
+  promPort = 20001;
+  promNodePort = 20002;
 in {
   services.grafana = {
     enable = true;
     settings.server = {
-      domain = "localhost:${toString grafana-port}";
-      http_port = grafana-port;
+      domain = "localhost:${toString grafanaPort}";
+      http_port = grafanaPort;
       http_addr = "127.0.0.1";
     };
     openFirewall = false;
@@ -38,7 +38,7 @@ in {
   # https://nixos.org/manual/nixos/stable/#module-services-prometheus-exporters
   services.prometheus.exporters.node = {
     enable = true;
-    port = prom-node-port;
+    port = promNodePort;
     openFirewall = false;
     # https://github.com/NixOS/nixpkgs/blob/nixos-24.05/nixos/modules/services/monitoring/prometheus/exporters.nix
     enabledCollectors = ["systemd"];
@@ -53,7 +53,7 @@ in {
     enable = true;
     globalConfig.scrape_interval = "10s";
     listenAddress = "localhost";
-    port = prom-port;
+    port = promPort;
     scrapeConfigs = [
       {
         job_name = "node";
