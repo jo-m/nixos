@@ -30,6 +30,7 @@
     pv
     screen
     tmux
+    tree
     unrar
     util-linux
     wget

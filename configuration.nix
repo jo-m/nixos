@@ -25,6 +25,7 @@
     ./modules/printscan.nix
     ./modules/virt.nix
     ./modules/rtl-sdr.nix
+    ./modules/packages-ai.nix
     ./modules/packages-sysadmin-cli.nix
     ./modules/packages-basic.nix
     ./modules/packages-dev-tools.nix
