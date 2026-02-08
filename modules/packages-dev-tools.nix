@@ -1,6 +1,5 @@
 # Packages - Dev tools.
 {
-  config,
   pkgs,
   unstablePkgs,
   ...

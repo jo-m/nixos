@@ -1,12 +1,6 @@
 # Grafana and Prometheus.
 # Default login is admin:admin.
-{
-  config,
-  pkgs,
-  unstablePkgs,
-  ...
-}: let
-  grafanaDomain = "monitor";
+{config, ...}: let
   grafanaPort = 20000;
   promPort = 20001;
   promNodePort = 20002;

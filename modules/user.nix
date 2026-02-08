@@ -1,10 +1,5 @@
 # User setup.
-{
-  config,
-  pkgs,
-  unstablePkgs,
-  ...
-}: let
+{config, ...}: let
   username = config.custom.unprivilegedUser;
 in {
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -12,7 +7,6 @@ in {
     isNormalUser = true;
     description = username;
     extraGroups = ["networkmanager" "wheel" "dialout"];
-    packages = with pkgs; [];
   };
 
   security.sudo.extraRules = [

@@ -1,9 +1,5 @@
 # Packages - basics.
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; let
     myPython3 = python3.withPackages (ps: with ps; [pip]);
   in [

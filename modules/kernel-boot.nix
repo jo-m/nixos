@@ -1,6 +1,5 @@
 # Generic boot and kernel options.
 {
-  config,
   pkgs,
   lib,
   ...

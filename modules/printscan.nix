@@ -1,10 +1,5 @@
 # Printing and scanning.
-{
-  config,
-  pkgs,
-  unstablePkgs,
-  ...
-}: {
+{config, ...}: {
   # Enable CUPS to print documents.
   services.printing.enable = true;
 

@@ -9,7 +9,6 @@
   };
 
   outputs = {
-    self,
     nixpkgs,
     unstable,
     lanzaboote,
@@ -29,7 +28,7 @@
 
         ./configuration.nix
 
-        ({pkgs, ...}: {
+        (_: {
           networking.hostName = hostname;
         })
       ];

@@ -1,9 +1,4 @@
 # TODO: description.
-{
-  config,
-  pkgs,
-  unstablePkgs,
-  ...
-}: {
+_: {
   # TODO: add config here.
 }

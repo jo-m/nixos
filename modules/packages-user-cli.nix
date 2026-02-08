@@ -4,15 +4,7 @@
   pkgs,
   ...
 }: {
-  environment.systemPackages = with pkgs; let
-    myTexlive = texlive.combine {
-      inherit
-        (texlive)
-        scheme-full
-        moderncv
-        ;
-    };
-  in [
+  environment.systemPackages = with pkgs; [
     age
     bat
     broot

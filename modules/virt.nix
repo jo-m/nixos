@@ -1,10 +1,5 @@
 # Virtualization and containers.
-{
-  config,
-  pkgs,
-  unstablePkgs,
-  ...
-}: let
+{config, ...}: let
   username = config.custom.unprivilegedUser;
 in {
   # Rootless Docker and Podman

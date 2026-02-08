@@ -2,7 +2,6 @@
 {
   config,
   pkgs,
-  unstablePkgs,
   ...
 }: {
   # Driver setup.

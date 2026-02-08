@@ -1,9 +1,5 @@
 # Packages - Sysadmin CLI tools.
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     # Generic
     bcc

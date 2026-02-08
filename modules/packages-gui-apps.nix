@@ -1,10 +1,5 @@
 # Packages - GUI and Desktop apps.
-{
-  config,
-  pkgs,
-  unstablePkgs,
-  ...
-}: {
+{pkgs, ...}: {
   # Install firefox.
   programs.firefox.enable = true;
 

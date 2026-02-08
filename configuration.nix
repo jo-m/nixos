@@ -1,10 +1,4 @@
-{
-  config,
-  pkgs,
-  options,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   options.custom.unprivilegedUser = lib.mkOption {
     type = lib.types.str;
     default = "joni";

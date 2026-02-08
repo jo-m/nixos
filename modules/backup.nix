@@ -3,8 +3,6 @@
 {
   config,
   pkgs,
-  lib,
-  unstablePkgs,
   ...
 }: let
   borgRepoKeyKeepassUrl = "borg-passphrase://backup";

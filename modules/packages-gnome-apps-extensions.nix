@@ -1,9 +1,5 @@
 # Packages - Gnome apps and extensions.
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     dconf-editor
     gnome-terminal

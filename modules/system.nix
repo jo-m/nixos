@@ -1,9 +1,7 @@
 # Various system level config.
 {
-  config,
   pkgs,
   lib,
-  username,
   ...
 }: {
   # Enable networking
