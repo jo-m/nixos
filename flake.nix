@@ -39,5 +39,13 @@
     };
 
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
+
+    devShells.${system}.default = let
+      pkgs = nixpkgs.legacyPackages.${system};
+      scripts = import ./scripts.nix {inherit pkgs;};
+    in
+      pkgs.mkShell {
+        packages = [scripts];
+      };
   };
 }
