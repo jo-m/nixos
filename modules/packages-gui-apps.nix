@@ -41,8 +41,7 @@
     losslesscut-bin
     mediainfo-gui
     mesa-demos
-    pkgs.libheif
-    pkgs.libheif.out
+    libheif
     powerline-fonts
     #qgis
     signal-desktop
