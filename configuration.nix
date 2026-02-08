@@ -30,7 +30,6 @@
     ./modules/packages-basic.nix
     ./modules/packages-dev-tools.nix
     ./modules/packages-gnome-apps-extensions.nix
-    ./modules/packages-sysadmin-cli.nix
     ./modules/packages-user-cli.nix
     ./modules/packages-gui-apps.nix
   ];
