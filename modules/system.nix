@@ -40,6 +40,11 @@
     "z ${config.services.chrony.directory}/chrony.keys 0640 root chrony - -"
   ];
 
+  # https://www.openwall.com/lists/oss-security/2025/12/28/4
+  systemd.generators.systemd-ssh-generator = "/dev/null";
+  systemd.sockets.sshd-unix-local.enable = lib.mkForce false;
+  systemd.sockets.sshd-vsock.enable = lib.mkForce false;
+
   # Disable the default NixOS shell aliases
   environment.shellAliases = {
     l = "ls -luh";
