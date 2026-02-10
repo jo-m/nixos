@@ -2,6 +2,7 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }: {
   # Enable networking
@@ -29,6 +30,15 @@
       LC_NUMERIC = "de_CH.UTF-8";
     };
   };
+
+  # Use chrony instead of timesyncd.
+  # See https://chrony-project.org/faq.html.
+  services.timesyncd.enable = false;
+  services.chrony.enable = true;
+  # Work around https://github.com/NixOS/nixpkgs/issues/445035.
+  systemd.tmpfiles.rules = lib.mkAfter [
+    "z ${config.services.chrony.directory}/chrony.keys 0640 root chrony - -"
+  ];
 
   # Disable the default NixOS shell aliases
   environment.shellAliases = {
