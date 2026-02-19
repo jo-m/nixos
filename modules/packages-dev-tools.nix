@@ -64,6 +64,7 @@
     sqlite-interactive
     sqlitebrowser
     sublime-merge-dev
+    svgo
     valgrind
 
     # Hardware

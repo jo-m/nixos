@@ -1,10 +1,15 @@
 # Virtualization and containers.
-{config, ...}: let
+{
+  config,
+  pkgs,
+  ...
+}: let
   username = config.custom.unprivilegedUser;
 in {
   # Rootless Docker and Podman
   virtualisation.containers.enable = true;
   virtualisation.podman.enable = true;
+  environment.systemPackages = with pkgs; [podman-compose];
   virtualisation.docker.rootless = {
     enable = true;
     setSocketVariable = true;
