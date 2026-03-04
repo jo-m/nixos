@@ -26,7 +26,6 @@
     up
     zbar
 
-    fishPlugins.pisces
     fishPlugins.z
   ];
 
