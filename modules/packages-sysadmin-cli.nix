@@ -16,6 +16,7 @@
     trace-cmd
     tpm2-tools
     usbutils
+    nvme-cli
 
     # Networking
     bridge-utils

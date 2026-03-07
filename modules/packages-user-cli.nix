@@ -27,6 +27,9 @@
     zbar
 
     fishPlugins.z
+    fishPlugins.pisces
+    fishPlugins.tide
+    meslo-lgs-nf # Font for Tide
   ];
 
   # https://github.com/nix-community/nix-direnv
