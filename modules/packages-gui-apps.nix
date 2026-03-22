@@ -4,6 +4,7 @@
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
+    alacritty
     audacity
     baobab
     blobdrop
@@ -12,6 +13,7 @@
     ffmpeg_7-full
     flameshot
     foliate
+    ghostty
     gimp-with-plugins
     git-credential-keepassxc
     google-chrome
