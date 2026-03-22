@@ -10,13 +10,13 @@
     hdparm
     lsof
     numactl
+    nvme-cli
     powertop
     smartmontools
     sysstat
-    trace-cmd
     tpm2-tools
+    trace-cmd
     usbutils
-    nvme-cli
 
     # Networking
     bridge-utils
@@ -24,12 +24,12 @@
     nmap
     openconnect
     openvpn
-    openvpn3
     openvpn-auth-ldap
-    tcpdump
-    tshark
-    trippy
+    openvpn3
     ssh-audit
+    tcpdump
+    trippy
+    tshark
 
     # Backup
     borgbackup

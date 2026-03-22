@@ -4,8 +4,6 @@
     dconf-editor
     gnome-terminal
     gnome-tweaks
-    simple-scan
-    sushi
     gnomeExtensions.appindicator # App tray
     gnomeExtensions.control-monitor-brightness-and-volume-with-ddcutil
     gnomeExtensions.dash-to-dock # Dock
@@ -17,6 +15,8 @@
     gnomeExtensions.system-monitor
     gnomeExtensions.user-themes
     papirus-icon-theme
+    simple-scan
+    sushi
   ];
 
   nixpkgs.overlays = [

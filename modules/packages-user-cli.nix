@@ -26,9 +26,9 @@
     up
     zbar
 
-    fishPlugins.z
     fishPlugins.pisces
     fishPlugins.tide
+    fishPlugins.z
     meslo-lgs-nf # Font for Tide
   ];
 

@@ -34,22 +34,22 @@
     insync-nautilus
     intel-gpu-tools
     iosevka
+    joplin-desktop
     keepassxc
+    libheif
     libreoffice
     libva-utils # For vainfo (video accel)
     linssid
     losslesscut-bin
     mediainfo-gui
     mesa-demos
-    libheif
     powerline-fonts
-    #qgis
+    # qgis
     signal-desktop
     solaar
     telegram-desktop
     transmission_4
     transmission_4-gtk
-    joplin-desktop
     v4l-utils
     vlc
     vscodium

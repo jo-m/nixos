@@ -35,18 +35,17 @@
     difftastic
     dive
     flex
+    fzf-make
     gcc13
     gdb
     git-lfs
     gitFull
     gitui
-    lazygit
-    fzf-make
     gnumake
-    unstablePkgs.go_1_26 # We always want the newest Go
     gperf
     hugo
     icdiff
+    lazygit
     meld
     mitmproxy
     mycli
@@ -65,15 +64,8 @@
     sqlitebrowser
     sublime-merge-dev
     svgo
+    unstablePkgs.go_1_26 # We always want the newest Go
     valgrind
-
-    # We always want the newest.
-    unstablePkgs.copilot-language-server
-    # Workaround: https://github.com/NixOS/nixpkgs/issues/500198#issuecomment-4064163275
-    (unstablePkgs.github-copilot-cli.overrideAttrs (oldAttrs: {
-      postInstall = ''
-      '';
-    }))
 
     # Hardware
     tio
@@ -91,14 +83,14 @@
     vulkan-tools-lunarg
     vulkan-volk
 
-    # Intel GPU
-    #level-zero
-    #mkl
-    #oneDNN
-    #openvino
-    #vpl-gpu-rt
-
     # Vibing
     unstablePkgs.claude-code
+    # We always want the newest.
+    unstablePkgs.copilot-language-server
+    # Workaround: https://github.com/NixOS/nixpkgs/issues/500198#issuecomment-4064163275
+    (unstablePkgs.github-copilot-cli.overrideAttrs (oldAttrs: {
+      postInstall = ''
+      '';
+    }))
   ];
 }
