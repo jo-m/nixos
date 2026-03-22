@@ -67,6 +67,14 @@
     svgo
     valgrind
 
+    # We always want the newest.
+    unstablePkgs.copilot-language-server
+    # Workaround: https://github.com/NixOS/nixpkgs/issues/500198#issuecomment-4064163275
+    (unstablePkgs.github-copilot-cli.overrideAttrs (oldAttrs: {
+      postInstall = ''
+      '';
+    }))
+
     # Hardware
     tio
 
