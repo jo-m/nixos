@@ -18,6 +18,7 @@
     ./modules/gnome-desktop.nix
     ./modules/printscan.nix
     ./modules/virt.nix
+    ./modules/jai.nix
     ./modules/rtl-sdr.nix
     ./modules/packages-ai.nix
     ./modules/packages-sysadmin-cli.nix
