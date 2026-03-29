@@ -84,9 +84,7 @@
     vulkan-volk
 
     # Vibing
-    unstablePkgs.claude-code
     # We always want the newest.
-    unstablePkgs.copilot-language-server
-    unstablePkgs.github-copilot-cli
+    unstablePkgs.claude-code
   ];
 }
