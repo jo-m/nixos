@@ -62,7 +62,7 @@
     rustc
     sqlite-interactive
     sqlitebrowser
-    sublime-merge-dev
+    sublime-merge
     svgo
     unstablePkgs.go_1_26 # We always want the newest Go
     valgrind

@@ -3,13 +3,13 @@
 final: prev: {
   jai = final.gcc15Stdenv.mkDerivation {
     pname = "jai";
-    version = "0.2-dev";
+    version = "0.3-dev";
 
     src = final.fetchFromGitHub {
       owner = "stanford-scs";
       repo = "jai";
-      rev = "v0.2";
-      hash = "sha256-OZrsNJrKe3gH3sGefrKgnFmDiMMP+xr4eM90hdGEDdg=";
+      rev = "v0.3";
+      hash = "sha256-BMgWodfo5l/PKOniEYHrUSQJIr3t8BzdLhw9nU0qbOw=";
     };
 
     nativeBuildInputs = with final; [
