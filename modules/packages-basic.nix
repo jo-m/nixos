@@ -1,5 +1,9 @@
 # Packages - basics.
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   environment.systemPackages = with pkgs; let
     myPython3 = python3.withPackages (ps: with ps; [pip]);
   in [
@@ -19,6 +23,7 @@
     myPython3
     nettools
     p7zip
+    (lib.hiPrio pkgs.parallel)
     pbzip2
     pigz
     procps
