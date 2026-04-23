@@ -64,7 +64,7 @@
     sqlitebrowser
     sublime-merge
     svgo
-    unstablePkgs.go_1_26 # We always want the newest Go
+    pkgs.go_1_26 # We always want the newest Go
     valgrind
 
     # Hardware
