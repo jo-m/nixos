@@ -6,9 +6,10 @@ switch:
 .PHONY: upgrade
 upgrade:
 	nix flake update
-	sudo nixos-rebuild switch --flake . -L
+	nixos-rebuild build --flake . -L
 	git add flake.lock
 	git commit -m 'upgrade'
+	sudo nixos-rebuild switch --flake . -L
 
 .PHONY: pullpush
 pullpush:
