@@ -9,7 +9,7 @@ final: prev: {
       owner = "stanford-scs";
       repo = "jai";
       rev = "v0.3";
-      hash = "sha256-BMgWodfo5l/PKOniEYHrUSQJIr3t8BzdLhw9nU0qbOw=";
+      hash = "sha256-AByC7Xh1FYbQ/4Au396m2zYUxsLqcF1PEbpdz7x6LaQ=";
     };
 
     nativeBuildInputs = with final; [
