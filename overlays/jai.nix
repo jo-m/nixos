@@ -28,7 +28,15 @@ final: prev: {
       ./autogen.sh
     '';
 
-    # Skip setuid install hooks (NixOS handles setuid via security.wrappers).
+    # Pin the untrusted user name so the build does not depend on
+    # whatever users happen to be visible in the Nix build sandbox.
+    # The matching NixOS user is declared in modules/jai.nix.
+    configureFlags = [
+      "--with-untrusted-user=jai"
+    ];
+
+    # Skip setuid install hooks (NixOS handles setuid via security.wrappers)
+    # and drop the sysusers.d snippet (the user is declared in NixOS config).
     postInstall = ''
       rm -rf $out/lib/sysusers.d
     '';
