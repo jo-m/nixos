@@ -9,6 +9,8 @@ in {
     extraGroups = ["networkmanager" "wheel" "dialout"];
   };
 
+  nix.settings.allowed-users = [username];
+
   security.sudo.extraRules = [
     {
       users = [username];
