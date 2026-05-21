@@ -46,7 +46,7 @@
     mediainfo-gui
     mesa-demos
     powerline-fonts
-    # qgis
+    qgis
     signal-desktop
     solaar
     telegram-desktop
