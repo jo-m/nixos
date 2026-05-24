@@ -45,7 +45,7 @@ git config --global user.name "root"
 nixos-generate-config --dir .
 ```
 
-### Debug store size
+## Debug store size
 
 ```bash
 nix build .#nixosConfigurations.nixbox.config.system.build.toplevel
@@ -56,3 +56,9 @@ nix path-info --closure-size --human-readable ./result
 ```
 
 https://nixcademy.com/posts/minimizing-nixos-images/
+
+## Show revision the current system was built from
+
+```bash
+nixos-version --configuration-revision
+```

@@ -9,6 +9,7 @@
   };
 
   outputs = {
+    self,
     nixpkgs,
     unstable,
     lanzaboote,
@@ -30,6 +31,7 @@
 
         (_: {
           networking.hostName = hostname;
+          system.configurationRevision = self.rev or self.dirtyRev or "dirty";
         })
       ];
       specialArgs = {
