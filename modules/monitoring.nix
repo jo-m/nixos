@@ -7,10 +7,15 @@
 in {
   services.grafana = {
     enable = true;
-    settings.server = {
-      domain = "localhost:${toString grafanaPort}";
-      http_port = grafanaPort;
-      http_addr = "127.0.0.1";
+    settings = {
+      server = {
+        domain = "localhost:${toString grafanaPort}";
+        http_port = grafanaPort;
+        http_addr = "127.0.0.1";
+      };
+      # Since NixOS 26.05 there is no longer a default
+      # and hardcoding it is fine for our case (no secrets in the db).
+      security.secret_key = "SW2YcwTIb9zpOOhoPsMm";
     };
     openFirewall = false;
 

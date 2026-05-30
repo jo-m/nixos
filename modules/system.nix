@@ -80,8 +80,45 @@
     };
   };
 
+  # Copied and adapted from https://github.com/NixOS/nixpkgs/blob/nixos-26.05/nixos/modules/services/misc/angrr.nix.
+  # TODO: As soon as we upgrade to next NixOS and get angrr >= 0.2.4,
+  #       we can go back to using the simple "period" setting, see
+  #       https://github.com/linyinfeng/angrr/releases/tag/v0.2.4.
   services.angrr = {
     enable = true;
-    period = "2months";
+    settings = {
+      profile-policies = {
+        system = {
+          keep-booted-system = true;
+          keep-current-system = true;
+          keep-latest-n = 5;
+          keep-since = "2months";
+          profile-paths = [
+            "/nix/var/nix/profiles/system"
+          ];
+        };
+        user = {
+          enable = false;
+          keep-booted-system = false;
+          keep-current-system = false;
+          keep-latest-n = 1;
+          keep-since = "14d";
+          profile-paths = [
+            "~/.local/state/nix/profiles/profile"
+            "/nix/var/nix/profiles/per-user/root/profile"
+          ];
+        };
+      };
+      temporary-root-policies = {
+        direnv = {
+          path-regex = "/\\.direnv/";
+          period = "2months";
+        };
+        result = {
+          path-regex = "/result[^/]*$";
+          period = "14d";
+        };
+      };
+    };
   };
 }
