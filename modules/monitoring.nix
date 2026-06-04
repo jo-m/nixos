@@ -9,7 +9,7 @@ in {
     enable = true;
     settings = {
       server = {
-        domain = "localhost:${toString grafanaPort}";
+        domain = "localhost";
         http_port = grafanaPort;
         http_addr = "127.0.0.1";
       };
