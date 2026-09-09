@@ -20,4 +20,16 @@ in {
       ];
     }
   ];
+
+  # For Teddycloud, see ~/.local/share/dockerapps/teddycloud/docker-compose.yml.
+  networking.firewall.allowedTCPPorts = [443];
+  # boot.kernel.sysctl = {
+  #   "net.ipv4.ip_unprivileged_port_start" = 443;
+  # };
+  # networking.interfaces.wlo1.ipv4.addresses = [
+  #   {
+  #     address = "10.0.0.13";
+  #     prefixLength = 24;
+  #   }
+  # ];
 }
