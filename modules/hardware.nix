@@ -19,8 +19,9 @@
 
   # DDC
   hardware.i2c.enable = true;
-  boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
-  boot.kernelModules = ["i2c-dev" "ddcci_backlight"];
+  # TODO: Re-enable ddcci.
+  # boot.extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
+  # boot.kernelModules = ["i2c-dev" "ddcci_backlight"];
   users.users.${config.custom.unprivilegedUser}.extraGroups = ["i2c"];
 
   # Enable flashing of QMK keyboards for non-root.
