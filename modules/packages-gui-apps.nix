@@ -1,5 +1,9 @@
 # Packages - GUI and Desktop apps.
-{pkgs, ...}: {
+{
+  pkgs,
+  unstablePkgs,
+  ...
+}: {
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -36,7 +40,7 @@
     insync-nautilus
     intel-gpu-tools
     iosevka
-    joplin-desktop
+    unstablePkgs.joplin-desktop # Error: In order to synchronise, please upgrade your application to version 3.7.0+. TODO: Revert to stable.
     keepassxc
     libheif
     libreoffice
