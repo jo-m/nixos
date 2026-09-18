@@ -26,10 +26,10 @@ in {
   boot.kernel.sysctl = {
     "net.ipv4.ip_unprivileged_port_start" = 443;
   };
-  networking.interfaces.wlo1.ipv4.addresses = [
-    {
-      address = "10.0.0.13";
-      prefixLength = 24;
-    }
-  ];
+  # The 10.0.0.13/24 secondary address that Teddycloud needs lives on the
+  # NetworkManager connection profile instead of here. NetworkManager manages
+  # wlo1, so networking.interfaces.wlo1.ipv4.addresses would be applied by a
+  # device-wanted oneshot (network-addresses-wlo1.service) that NetworkManager
+  # can flush when it activates the connection. Configured with:
+  #   nmcli con mod asdf +ipv4.addresses 10.0.0.13/24
 }
