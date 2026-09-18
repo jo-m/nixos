@@ -69,8 +69,4 @@
     enable = true;
     plugins = [pkgs.evolution-ews];
   };
-
-  nixpkgs.overlays = [
-    (import ../overlays/evolution-no-spam.nix)
-  ];
 }
