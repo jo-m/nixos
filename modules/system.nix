@@ -8,6 +8,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Enable resolving .local hostnames.
+  services.avahi.nssmdns4 = true;
+
   # Stop spamming dmesg wit this.
   networking.firewall.logRefusedConnections = false;
 
@@ -65,6 +68,9 @@
     # Default 90s may not be enough.
     TimeoutStartSec = "infinity";
   };
+
+  # # NetworkManager Internet conn sharing.
+  # networking.firewall.allowedUDPPorts = [53 67];
 
   nix = {
     gc = {
