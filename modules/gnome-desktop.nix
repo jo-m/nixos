@@ -73,6 +73,17 @@
     #jack.enable = true;
   };
 
+  # Rebuilds restart these units whenever a nixpkgs bump changes the store paths
+  # embedded in their generated unit files. Restarting the audio stack under a
+  # running GNOME session leaves the shell and gsd-media-keys without a mixer
+  # (volume slider gone, volume keys dead) until the next login, while apps
+  # reconnect and keep playing audio. Defer the restart to login instead.
+  systemd.user.services = {
+    pipewire.restartIfChanged = false;
+    "pipewire-pulse".restartIfChanged = false;
+    wireplumber.restartIfChanged = false;
+  };
+
   # Workaround to make Gnome HEIF thumbnails work
   environment.pathsToLink = ["share/thumbnailers"];
 
