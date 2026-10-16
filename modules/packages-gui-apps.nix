@@ -40,6 +40,7 @@
     insync-nautilus
     intel-gpu-tools
     iosevka
+    kdePackages.k3b
     unstablePkgs.joplin-desktop # Error: In order to synchronise, please upgrade your application to version 3.7.0+. TODO: Revert to stable.
     keepassxc
     libheif
@@ -53,7 +54,6 @@
     qgis
     signal-desktop
     solaar
-    telegram-desktop
     transmission_4
     transmission_4-gtk
     v4l-utils
