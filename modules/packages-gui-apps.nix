@@ -8,7 +8,7 @@
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
-    alacritty
+    asunder lame # CDs
     audacity
     baobab
     blobdrop
@@ -40,7 +40,6 @@
     insync-nautilus
     intel-gpu-tools
     iosevka
-    unstablePkgs.joplin-desktop # Error: In order to synchronise, please upgrade your application to version 3.7.0+. TODO: Revert to stable.
     keepassxc
     libheif
     libreoffice
@@ -55,6 +54,7 @@
     solaar
     transmission_4
     transmission_4-gtk
+    unstablePkgs.joplin-desktop # Error: In order to synchronise, please upgrade your application to version 3.7.0+. TODO: Revert to stable.
     v4l-utils
     vlc
     vscodium
