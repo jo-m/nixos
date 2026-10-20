@@ -6,6 +6,8 @@
     bpftrace
     dmidecode
     ethtool
+    exfat
+    exfatprogs
     f3
     hdparm
     lsof

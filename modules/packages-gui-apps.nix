@@ -8,7 +8,7 @@
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
-    asunder lame # CDs
+    asunder # CDs
     audacity
     baobab
     blobdrop
@@ -41,6 +41,7 @@
     intel-gpu-tools
     iosevka
     keepassxc
+    lame # CDs
     libheif
     libreoffice
     libva-utils # For vainfo (video accel)
