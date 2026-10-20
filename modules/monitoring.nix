@@ -50,7 +50,9 @@ in {
   # https://github.com/NixOS/nixpkgs/blob/nixos-24.05/nixos/modules/services/monitoring/prometheus/default.nix
   services.prometheus = {
     enable = true;
-    globalConfig.scrape_interval = "10s";
+    globalConfig.scrape_interval = "15s";
+    retentionTime = "1y";
+    extraFlags = ["--storage.tsdb.retention.size=5GB"];
     listenAddress = "localhost";
     port = promPort;
     scrapeConfigs = [
