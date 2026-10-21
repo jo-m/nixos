@@ -8,6 +8,13 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # TODO: Remove once upstream NixOS is up to date.
+  # https://emudhra.we-have-a-problem.com/
+  security.pki.caCertificateBlacklist = [
+    "Comodo AAA Services root"
+    "emSign ECC Root CA - G3"
+  ];
+
   # Enable resolving .local hostnames.
   services.avahi.nssmdns4 = true;
 
