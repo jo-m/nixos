@@ -6,6 +6,11 @@
       url = "github:nix-community/lanzaboote/v1.0.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # https://github.com/yuezk/GlobalProtect-openconnect#nixos
+    globalprotect-openconnect = {
+      url = "github:yuezk/GlobalProtect-openconnect";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -13,6 +18,7 @@
     nixpkgs,
     unstable,
     lanzaboote,
+    globalprotect-openconnect,
     ...
   }: let
     system = "x86_64-linux";
@@ -26,6 +32,7 @@
       inherit system;
       modules = [
         lanzaboote.nixosModules.lanzaboote
+        globalprotect-openconnect.nixosModules.default
 
         ./configuration.nix
 

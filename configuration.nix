@@ -17,6 +17,7 @@
     ./modules/backup.nix
     ./modules/gnome-desktop.nix
     ./modules/printscan.nix
+    ./modules/globalprotect.nix
     ./modules/virt.nix
     ./modules/jai.nix
     ./modules/rtl-sdr.nix
