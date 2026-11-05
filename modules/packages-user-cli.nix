@@ -7,7 +7,6 @@
   environment.systemPackages = with pkgs; [
     age
     bat
-    broot
     btop
     chezmoi
     duf
@@ -15,15 +14,11 @@
     fzf
     graphviz
     imagemagick
-    mesa-demos
     pdftk
     poppler-utils
-    potrace
-    qrencode
     ripgrep
     tinymist
     typst
-    up
     zbar
 
     fishPlugins.pisces

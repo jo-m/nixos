@@ -18,7 +18,6 @@
     iw
     jq
     lshw
-    minicom
     moreutils
     myPython3
     nettools
@@ -35,7 +34,6 @@
     unrar
     util-linux
     wget
-    whois
     zstd
   ];
 }

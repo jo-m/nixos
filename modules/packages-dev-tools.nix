@@ -24,32 +24,22 @@
     android-tools
     ansible
     apktool
-    avrdude
     binwalk
-    bison
-    cargo
-    ccache
     clang-tools
     cmake
     difftastic
     dive
-    flex
     fzf-make
-    gcc13
-    gdb
     git-lfs
     gitFull
-    gitui
     gnumake
-    gperf
     hugo
     icdiff
-    lazygit
     meld
-    nodejs_22
-    numbat
+    nodejs
     pgcli
     pkg-config
+    pkgs.go_1_27 # Newest Go.
     pngcrush
     ruff
     rustc
@@ -57,11 +47,7 @@
     sqlitebrowser
     sublime-merge
     svgo
-    pkgs.go_1_26 # We always want the newest Go
-
-    # Hardware
-    tio
-
-    unstablePkgs.claude-code
+    tio # Serial term.
+    unstablePkgs.claude-code # Always the newest.
   ];
 }

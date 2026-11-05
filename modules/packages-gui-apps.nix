@@ -11,20 +11,17 @@
     asunder # CDs
     audacity
     baobab
-    blobdrop
     ddcui
     ddcutil
-    ffmpeg_7-full
+    ffmpeg-full
     flameshot
     foliate
-    ghostty
     gimp-with-plugins
     git-credential-keepassxc
     google-chrome
     gparted
     gpu-viewer
     gpxsee
-    gqrx
     gst_all_1.gst-libav
     gst_all_1.gst-plugins-bad
     gst_all_1.gst-plugins-base
@@ -47,10 +44,7 @@
     libva-utils # For vainfo (video accel)
     linssid
     losslesscut-bin
-    mediainfo-gui
-    mesa-demos
     powerline-fonts
-    qgis
     signal-desktop
     solaar
     transmission_4

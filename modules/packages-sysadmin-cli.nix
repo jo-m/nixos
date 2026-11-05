@@ -24,10 +24,6 @@
     bridge-utils
     dnsutils
     nmap
-    openconnect
-    openvpn
-    openvpn-auth-ldap
-    openvpn3
     ssh-audit
     tcpdump
     trippy
@@ -35,6 +31,5 @@
 
     # Backup
     borgbackup
-    libsecret
   ];
 }
